@@ -1,11 +1,13 @@
 // App
 
-import ListGroup from "./Components/ListGroup";
+import MakeHeadVid from "./Components/bgvid";
+import MakeHead from "./Components/navBar";
 
 function App() {
   return (
     <div>
-      <ListGroup />
+      <MakeHead />
+      <MakeHeadVid />
     </div>
   );
 }
