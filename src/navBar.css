@@ -22,6 +22,7 @@
     align-items: center;
     justify-content: space-between;
     background: #f6f8f9;
+    box-shadow: #222;
     transition: 0.5s ease-in-out;
 
 }
@@ -96,7 +97,7 @@ ul li {
     margin: 10px 30px;
     font-size: 25px;
     cursor: pointer;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 .light {
