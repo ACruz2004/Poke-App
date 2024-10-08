@@ -1,12 +1,11 @@
 // App
-
 import MakeHeadVid from "./Components/bgvid";
 import MakeHead from "./Components/navBar";
 
-function App() {
+const App = () => {
   return (
     <div>
-      <div className="container">
+      <div className={"container"}>
         <MakeHead />
       </div>
       <div className="bgVid">
@@ -14,6 +13,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;

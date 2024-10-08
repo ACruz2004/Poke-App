@@ -5,6 +5,14 @@
     -webkit-text-stroke: 1px #007bff;
     color: rgb(255, 239, 61);
     */
+    transition: 0.5s;
+}
+
+.logoTextDark {
+    font-family: PokeFont;
+    font-size: 60px;
+    color:#f6f8f9;
+    transition: 0.5s ease-in-out;
 }
 
 .nav {
@@ -14,8 +22,20 @@
     align-items: center;
     justify-content: space-between;
     background: #f6f8f9;
+    transition: 0.5s ease-in-out;
 
 }
+
+.navDark {
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #222;
+    transition: 0.5s ease-in-out;
+}
+
 
 .logo {
     z-index: 3;
@@ -35,6 +55,12 @@
     width: 60px;
     cursor: pointer;
     margin-left: 30px;
+    transition: all 0.5s ease-in-out;
+}
+
+.toggleIcon:hover {
+    z-index: 3;
+    transform: rotate(720deg);
 }
 
 .searchBox {
@@ -63,14 +89,23 @@ ul {
     padding-left: 145px;
 }
 
-ul li{
+ul li {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     z-index: 3;
     display: inline-block;
     margin: 10px 30px;
     font-size: 25px;
     cursor: pointer;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.light {
+    color:#222;
+    
+}
+
+.dark {
+    color: #f6f8f9;
 }
 
 ul li:hover {

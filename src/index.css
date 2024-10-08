@@ -3,6 +3,7 @@ html {
     background: #f6f8f9;
 }
 
+
 @font-face {
     font-family: 'PokeFont';
     src: url(./assets/ketchum/Ketchum.otf);
@@ -19,6 +20,7 @@ html {
     width: 100%;
     min-height: 5vh;
 }
+
 
 .bgVid {
     top: 2;
@@ -53,4 +55,5 @@ video {
     color: rgb(255, 239, 61);
     z-index: 2;
 }
+
 
