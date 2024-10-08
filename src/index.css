@@ -1,4 +1,8 @@
 
+html {
+    background: #f6f8f9;
+}
+
 @font-face {
     font-family: 'PokeFont';
     src: url(./assets/ketchum/Ketchum.otf);
