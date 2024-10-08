@@ -18,7 +18,7 @@ const MakeHead = () => {
 
       <div className="searchBox">
         <input type="text" placeholder="Search" />
-        <img src={searchLight} alt="" />
+        <img src={searchDark} alt="" />
       </div>
 
       <img src={makeDay} alt="" className="toggleIcon" />
