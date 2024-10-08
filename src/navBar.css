@@ -1,3 +1,11 @@
+.logoText {
+    font-family: PokeFont;
+    font-size: 60px;
+    /*
+    -webkit-text-stroke: 1px #007bff;
+    color: rgb(255, 239, 61);
+    */
+}
 
 .nav {
     z-index: 3;
@@ -11,7 +19,7 @@
 
 .logo {
     z-index: 3;
-    width: 100px;
+    width: 75px;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
@@ -28,7 +36,6 @@
     cursor: pointer;
     margin-left: 30px;
 }
-
 
 .searchBox {
     z-index: 3;
@@ -53,13 +60,20 @@ ul {
     z-index: 3;
     flex: 1;
     list-style: none;
-    text-align: center;
+    padding-left: 145px;
 }
 
 ul li{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     z-index: 3;
     display: inline-block;
-    margin: 10px 20px;
-    font-size: 18px;
+    margin: 10px 30px;
+    font-size: 25px;
     cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+ul li:hover {
+    z-index: 3;
+    transform: scale(1.25);
 }

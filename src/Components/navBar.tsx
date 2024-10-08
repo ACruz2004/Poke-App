@@ -9,17 +9,13 @@ const MakeHead = () => {
   return (
     <div className="nav">
       <img src={logo} alt="" className="logo" />
+      <h1 className="logoText">PokéTrove</h1>
       <ul>
         <li>Home</li>
         <li>Sets</li>
         <li>My Sets</li>
         <li>About</li>
       </ul>
-
-      <div className="searchBox">
-        <input type="text" placeholder="Search" />
-        <img src={searchDark} alt="" />
-      </div>
 
       <img src={makeDay} alt="" className="toggleIcon" />
     </div>
