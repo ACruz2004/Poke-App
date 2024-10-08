@@ -1,27 +1,37 @@
 
-
-
 .nav {
+    z-index: 3;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: white;
+    background: #f6f8f9;
 
 }
 
 .logo {
+    z-index: 3;
     width: 100px;
     cursor: pointer;
+    transition: all 0.5s ease-in-out;
 }
 
+.logo:hover {
+    z-index: 3;
+    transform: rotate(720deg);
+}
+
+
 .toggleIcon {
+    z-index: 3;
     width: 60px;
     cursor: pointer;
     margin-left: 30px;
 }
 
+
 .searchBox {
+    z-index: 3;
     display: flex;
     align-items: center;
     background: #242424;
@@ -30,6 +40,7 @@
 }
 
 .searchBox input {
+    z-index: 3;
     padding: 6px;
     background: transparent;
     border: 0;
@@ -39,12 +50,14 @@
     max-width: 200px;
 }
 ul {
+    z-index: 3;
     flex: 1;
     list-style: none;
     text-align: center;
 }
 
 ul li{
+    z-index: 3;
     display: inline-block;
     margin: 10px 20px;
     font-size: 18px;

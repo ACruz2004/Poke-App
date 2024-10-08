@@ -9,7 +9,9 @@ function App() {
       <div className="container">
         <MakeHead />
       </div>
-      <MakeHeadVid />
+      <div className="bgVid">
+        <MakeHeadVid />
+      </div>
     </div>
   );
 }
