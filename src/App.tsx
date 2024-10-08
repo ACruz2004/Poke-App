@@ -6,7 +6,9 @@ import MakeHead from "./Components/navBar";
 function App() {
   return (
     <div>
-      <MakeHead />
+      <div className="nav">
+        <MakeHead />
+      </div>
       <MakeHeadVid />
     </div>
   );
