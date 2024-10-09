@@ -3,6 +3,8 @@ import MakeHeadVid from "./Components/bgvid";
 import MakeBody from "./Components/body";
 import MakeHead from "./Components/navBar";
 import ImageStellar from "./ImageStellar";
+import ImageShroud from "./ImageShrouded";
+import ImageTwilight from "./ImageTwilight";
 import { useState } from "react";
 
 const App = () => {
@@ -23,6 +25,18 @@ const App = () => {
       </div>
       <div>
         <ImageStellar />
+      </div>
+      <div className="bodyCont">
+        <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
+      </div>
+      <div>
+        <ImageShroud />
+      </div>
+      <div className="bodyCont">
+        <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
+      </div>
+      <div>
+        <ImageTwilight />
       </div>
     </div>
   );
