@@ -1,3 +1,4 @@
+
 .logoText {
     font-family: PokeFont;
     font-size: 60px;
@@ -16,6 +17,7 @@
 }
 
 .nav {
+    position: fixed;
     z-index: 3;
     width: 100%;
     display: flex;
@@ -28,6 +30,7 @@
 }
 
 .navDark {
+    position: fixed;
     z-index: 3;
     width: 100%;
     display: flex;

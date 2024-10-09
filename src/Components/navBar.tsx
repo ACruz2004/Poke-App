@@ -5,7 +5,6 @@ import makeDay from "../assets/night.png";
 import searchLight from "../assets/search-b.png";
 import searchDark from "../assets/search-w.png";
 import { useState } from "react";
-
 const MakeHead = () => {
   const [toggleNode, setToggleNode] = useState(1);
   const handleToggle = () => {

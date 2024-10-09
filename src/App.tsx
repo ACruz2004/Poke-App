@@ -1,5 +1,6 @@
 // App
 import MakeHeadVid from "./Components/bgvid";
+import MakeBody from "./Components/body";
 import MakeHead from "./Components/navBar";
 
 const App = () => {
@@ -10,6 +11,9 @@ const App = () => {
       </div>
       <div className="bgVid">
         <MakeHeadVid />
+      </div>
+      <div className="bodyCont">
+        <MakeBody />
       </div>
     </div>
   );

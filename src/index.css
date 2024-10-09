@@ -1,9 +1,4 @@
 
-html {
-    background: #f6f8f9;
-}
-
-
 @font-face {
     font-family: 'PokeFont';
     src: url(./assets/ketchum/Ketchum.otf);
@@ -21,21 +16,24 @@ html {
     min-height: 5vh;
 }
 
+.bodyCont {
+    z-index: 1;
+}
 
 .bgVid {
-    top: 2;
+    z-index: 2;
 }
 
 .main {
     width: 100%;
-    height: 100vh;
+    height: 85vh;
 }
 
 video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    z-index: 1;
+    object-fit: fill;
+    top: 1;
 }
 
 .text {
@@ -44,7 +42,7 @@ video {
     font-style: italic;
     text-shadow: 0 0 5px #007bff, 0 0 10px #3a51e7;
     -webkit-text-stroke: 2px #007bff;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
@@ -53,7 +51,8 @@ video {
     justify-content: center;
     align-items: center;
     color: rgb(255, 239, 61);
-    z-index: 2;
+    z-index: 1;
 }
+
 
 
