@@ -62,3 +62,18 @@ video {
     top: 250px; /* Adjust as needed for perfect centering */
     transition: transform 0.5s ease; 
 }
+
+/* Parallax */
+.Pimage {
+    position: relative;
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100vh;
+    width:100%;
+}

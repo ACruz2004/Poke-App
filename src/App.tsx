@@ -2,6 +2,7 @@
 import MakeHeadVid from "./Components/bgvid";
 import MakeBody from "./Components/body";
 import MakeHead from "./Components/navBar";
+import ImageStellar from "./ImageStellar";
 import { useState } from "react";
 
 const App = () => {
@@ -19,6 +20,9 @@ const App = () => {
       </div>
       <div className="bodyCont">
         <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
+      </div>
+      <div>
+        <ImageStellar />
       </div>
     </div>
   );

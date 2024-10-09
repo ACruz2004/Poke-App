@@ -24,7 +24,7 @@
     align-items: center;
     justify-content: space-between;
     background: #f6f8f9;
-    box-shadow: #222;
+    box-shadow: 0 0 2px #222, 0 0 5px #222;
     transition: 0.5s ease-in-out;
 
 }
@@ -37,6 +37,7 @@
     align-items: center;
     justify-content: space-between;
     background: #222;
+    box-shadow: 0 0 10px #f6f8f9, 0 0 10px #f6f8f9;
     transition: 0.5s ease-in-out;
 }
 
