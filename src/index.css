@@ -8,7 +8,6 @@
     margin: 0;
     padding: 0;
 }
-
 .container {
     top: 0;
     position: inherit;
@@ -17,11 +16,12 @@
 }
 
 .bodyCont {
-    z-index: 1;
+    z-index: 3; /* Higher than both .text and .bgVid */
 }
 
 .bgVid {
-    z-index: 2;
+    z-index: 1; /* Lower than both .bodyCont and .text */
+    position: relative;
 }
 
 .main {
@@ -33,7 +33,9 @@ video {
     width: 100%;
     height: 100%;
     object-fit: fill;
-    top: 1;
+    top: 0; /* Correct the top value to 0 */
+    position: absolute; /* Ensure video stays behind other elements */
+    z-index: inherit; /* Inherits from .bgVid */
 }
 
 .text {
@@ -42,7 +44,7 @@ video {
     font-style: italic;
     text-shadow: 0 0 5px #007bff, 0 0 10px #3a51e7;
     -webkit-text-stroke: 2px #007bff;
-    position: fixed;
+    position: fixed; /* Default position */
     width: 100%;
     height: 100%;
     top: 0;
@@ -51,8 +53,12 @@ video {
     justify-content: center;
     align-items: center;
     color: rgb(255, 239, 61);
-    z-index: 1;
+    z-index: 2;
+    transition: transform 0.5s ease; /* Optional: smooth transition */
 }
 
-
-
+.text.absolute {
+    position: absolute; /* Change to absolute when scrolled past threshold */
+    top: 250px; /* Adjust as needed for perfect centering */
+    transition: transform 0.5s ease; 
+}
