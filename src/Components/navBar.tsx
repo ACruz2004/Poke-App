@@ -4,13 +4,12 @@ import makeNight from "../assets/day.png";
 import makeDay from "../assets/night.png";
 import searchLight from "../assets/search-b.png";
 import searchDark from "../assets/search-w.png";
-import { useState } from "react";
-const MakeHead = () => {
-  const [toggleNode, setToggleNode] = useState(1);
-  const handleToggle = () => {
-    setToggleNode((prev) => (prev === 1 ? 2 : 1));
-  };
 
+interface MakeHeadProps {
+  toggleNode: number;
+  handleToggle: () => void;
+}
+const MakeHead: React.FC<MakeHeadProps> = ({ toggleNode, handleToggle }) => {
   return (
     <div className={toggleNode == 1 ? "nav" : "navDark"}>
       <img src={logo} alt="" className="logo" />

@@ -1,9 +1,21 @@
 .bod {
     background: scroll;
-    background-color: aliceblue;
-    color: black;
+    background-color: #f6f8f9;
+    color: #222;
     width: 100%;
     height: 100vh;
     z-index: 1;
     top: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.bodDark {
+    background: scroll;
+    background-color: #222;
+    color: #f6f8f9;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    top: 0;
+    transition: all 0.5s ease-in-out;
 }
