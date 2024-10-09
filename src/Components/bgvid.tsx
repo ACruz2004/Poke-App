@@ -5,15 +5,22 @@ import { useEffect, useRef, useState } from "react";
 const MakeHeadVid = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [textPosition, setTextPosition] = useState("fixed"); // State to manage text position
+  const [fontSize, setFontSize] = useState(6); // State to manage font size (default to 6rem, larger start size)
   const scrollThreshold = 225; // Set the scroll threshold in pixels
 
   const handleScroll = () => {
-    // Check the current scroll position
-    if (window.scrollY >= scrollThreshold) {
+    const scrollPos = window.scrollY;
+
+    // Update text position based on scroll threshold
+    if (scrollPos >= scrollThreshold) {
       setTextPosition("absolute"); // Change to absolute when scroll exceeds threshold
     } else {
       setTextPosition("fixed"); // Reset to fixed when above threshold
     }
+
+    // Dynamically adjust font size based on scroll position
+    const newFontSize = Math.max(2, 6 - scrollPos / 150); // Shrinks when scrolling down, grows when scrolling up, starts larger
+    setFontSize(newFontSize);
   };
 
   useEffect(() => {
@@ -29,8 +36,9 @@ const MakeHeadVid = () => {
       <video ref={videoRef} src={videobg} autoPlay loop muted playsInline />
       <div className={`text ${textPosition}`}>
         <Parallax>
-          <h1>Welcome</h1>
-          <p>To PokéTrove!</p>
+          <h1 style={{ fontSize: `${fontSize}rem` }}> Welcome</h1>
+          <p style={{ fontSize: `${fontSize * 0.8}rem` }}>To PokéTrove!</p>{" "}
+          {/* Adjust the paragraph size proportionally */}
         </Parallax>
       </div>
     </div>

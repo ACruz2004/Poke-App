@@ -40,8 +40,8 @@ video {
 
 .text {
     font-family: PokeFont;
-    font-size: 50px;
     font-style: italic;
+    text-align: center;
     text-shadow: 0 0 5px #007bff, 0 0 10px #3a51e7;
     -webkit-text-stroke: 2px #007bff;
     position: fixed; /* Default position */
