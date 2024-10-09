@@ -79,8 +79,8 @@ video {
 /* Parallax */
 .Pimage {
     position: relative;
-    height: 75vh;
-    image-rendering:optimizeQuality;
+    height: 90vh;
+    
     border-radius: 40px 40px 40px 40px;
 }
 
