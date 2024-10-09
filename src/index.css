@@ -80,7 +80,9 @@ video {
 .Pimage {
     position: relative;
     height: 90vh;
-    
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    -webkit-filter: drop-shadow(12);
     border-radius: 40px 40px 40px 40px;
 }
 
