@@ -80,17 +80,25 @@ video {
 .Pimage {
     position: relative;
     height: 90vh;
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-    -webkit-filter: drop-shadow(12);
-    border-radius: 40px 40px 40px 40px;
+    border-radius: 40px; /* Simplified border-radius shorthand */
+    overflow: hidden; /* Ensure the content respects the border-radius */
+    z-index: 1; /* Ensure the background stays behind the logo */
+}
+.Pimage ::backdrop {
+    filter: blur(8px); /* Apply blur to the background */
+    -webkit-filter: blur(8px) drop-shadow(12px); /* Apply both blur and drop shadow */
+}
+.Plogo {
+    position: absolute;
+    top: 300px;           
+    left: 50%;          
+    transform: translate(-50%, -50%); /* Center logo vertically and horizontally */
+    z-index: 2; /* Ensure the logo stays on top of the blurred background */
 }
 
-.content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    height: 100vh;
-    width: 100%;
+.Plogo img {
+    width: 700px; /* Set logo size */
+    height: auto; /* Maintain aspect ratio */
+    filter: drop-shadow(12px); /* Keep drop shadow for the logo */
+    -webkit-filter: drop-shadow(12px);
 }
