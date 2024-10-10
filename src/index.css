@@ -99,6 +99,14 @@ video {
 .Plogo img {
     width: 700px; /* Set logo size */
     height: auto; /* Maintain aspect ratio */
-    filter: drop-shadow(12px); /* Keep drop shadow for the logo */
+    filter: drop-shadow(15px); /* Keep drop shadow for the logo */
     -webkit-filter: drop-shadow(12px);
+}
+
+.Pcards {
+    position: absolute;
+    top: 300px;           
+    left: 50%;          
+    transform: translate(-50%, -50%); 
+    z-index: 2; 
 }

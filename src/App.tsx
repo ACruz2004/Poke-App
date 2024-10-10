@@ -2,6 +2,7 @@
 import MakeHeadVid from "./Components/bgvid";
 import MakeBody from "./Components/body";
 import MakeHead from "./Components/navBar";
+import MakeGround from "./Components/ground";
 import ImageStellar from "./ImageStellar";
 import ImageShroud from "./ImageShrouded";
 import ImageTwilight from "./ImageTwilight";
@@ -37,6 +38,9 @@ const App = () => {
       </div>
       <div>
         <ImageTwilight />
+      </div>
+      <div className="bodyCont">
+        <MakeGround toggleNode={toggleNode} handleToggle={handleToggle} />
       </div>
     </div>
   );
