@@ -88,6 +88,7 @@ video {
     filter: blur(8px); /* Apply blur to the background */
     -webkit-filter: blur(8px) drop-shadow(12px); /* Apply both blur and drop shadow */
 }
+
 .Plogo {
     position: absolute;
     top: 300px;           
@@ -103,7 +104,55 @@ video {
     -webkit-filter: drop-shadow(12px);
 }
 
-.Pcards {
+.Ppack1 {
+    position: absolute;
+    top: 125px;           
+    left: 80%;          
+    transform: translate(-50%, -50%); /* Center logo vertically and horizontally */
+    z-index: 2; /* Ensure the logo stays on top of the blurred background */
+    transform: rotate(15deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.Ppack1 img {
+    width: 250px; /* Set logo size */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: -20px 20px 30px rgba(0, 0, 0, 1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.Ppack1 img:hover {
+    transform: rotate(-25deg) scale(1.15);
+    transition: transform 0.3s ease-in-out;
+   
+}
+
+.Ppack2 {
+    position: absolute;
+    top: 125px;           
+    left: 3%;          
+    transform: translate(-50%, -50%); /* Center logo vertically and horizontally */
+    z-index: 2; /* Ensure the logo stays on top of the blurred background */
+    transform: rotate(-15deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.Ppack2 img {
+    width: 250px; /* Set logo size */
+    height: auto; /* Maintain aspect ratio */
+    filter: drop-shadow(15px); /* Keep drop shadow for the logo */
+    -webkit-filter: drop-shadow(12px);
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.Ppack2 img:hover {
+    transform: rotate(25deg) scale(1.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.Pcard3 {
     position: absolute;
     top: 300px;           
     left: 50%;          
