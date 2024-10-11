@@ -7,6 +7,9 @@ Day 2:
 Day 3:
 <img width="1470" alt="Screenshot 2024-10-10 at 5 22 55 PM" src="https://github.com/user-attachments/assets/8608e212-e594-4308-b26c-f9cd012a9576">
 
+DAY 4 (CRAZYYYY WORRRRKKKKK)
+The Parallax and the card hovers are soooooo goooooooooooooood
+<img width="1470" alt="Screenshot 2024-10-10 at 8 43 00 PM" src="https://github.com/user-attachments/assets/010744aa-c6a4-4f5b-9be6-e61cd1467aac">
 
 
 # React + TypeScript + Vite
