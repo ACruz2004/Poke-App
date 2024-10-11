@@ -94,7 +94,7 @@ video {
     top: 300px;           
     left: 50%;          
     transform: translate(-50%, -50%); /* Center logo vertically and horizontally */
-    z-index: 2; /* Ensure the logo stays on top of the blurred background */
+    z-index: 3; /* Ensure the logo stays on top of the blurred background */
 }
 
 .Plogo img {
@@ -111,19 +111,19 @@ video {
     transform: translate(-50%, -50%); /* Center logo vertically and horizontally */
     z-index: 2; /* Ensure the logo stays on top of the blurred background */
     transform: rotate(15deg);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
 .Ppack1 img {
     width: 250px; /* Set logo size */
     height: auto; /* Maintain aspect ratio */
     box-shadow: -20px 20px 30px rgba(0, 0, 0, 1);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
 .Ppack1 img:hover {
     transform: rotate(-25deg) scale(1.15);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out;
    
 }
 
@@ -134,7 +134,7 @@ video {
     transform: translate(-50%, -50%); /* Center logo vertically and horizontally */
     z-index: 2; /* Ensure the logo stays on top of the blurred background */
     transform: rotate(-15deg);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
 .Ppack2 img {
@@ -143,19 +143,112 @@ video {
     filter: drop-shadow(15px); /* Keep drop shadow for the logo */
     -webkit-filter: drop-shadow(12px);
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 1);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
 .Ppack2 img:hover {
     transform: rotate(25deg) scale(1.15);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
 
+.Pcard1 {
+    position: absolute;
+    top: 125px;           
+    left: 80%;          
+    transform: translate(-50%, -50%); /* Center logo vertically and horizontally */
+    z-index: 2; /* Ensure the logo stays on top of the blurred background */
+    transform: rotate(15deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.Pcard1 img {
+    width: 250px; /* Set logo size */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.Pcard1 img:hover {
+    transform: rotate(-25deg) scale(1.15);
+    transition: transform 0.2s ease-in-out;
+
+}
+
+.Pcard2 {
+    position: absolute;
+    top: 125px;           
+    left: 75%;          
+    transform: translate(-50%, -50%); /* Center logo vertically and horizontally */
+    z-index: 1; /* Ensure the logo stays on top of the blurred background */
+    transform: rotate(10deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.Pcard2:hover {
+    z-index: 2; /* Raise z-index on hover to make Pcard2 overlap Pcard1 */
+    transition: transform 0.2s ease-in-out;
+}
+
+.Pcard2 img {
+    width: 250px; /* Set logo size */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.Pcard2 img:hover {
+    transform: rotate(-20deg) scale(1.15);
+    transition: transform 0.2s ease-in-out;
+}
+
 .Pcard3 {
     position: absolute;
-    top: 300px;           
-    left: 50%;          
-    transform: translate(-50%, -50%); 
-    z-index: 2; 
+    top: 125px;           
+    left: 3%;          
+    transform: translate(-50%, -50%); /* Center logo vertically and horizontally */
+    z-index: 2; /* Ensure the logo stays on top of the blurred background */
+    transform: rotate(-15deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.Pcard3 img {
+    width: 325px; /* Set logo size */
+    height: auto; /* Maintain aspect ratio */
+    filter: drop-shadow(15px); /* Keep drop shadow for the logo */
+    -webkit-filter: drop-shadow(12px);
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.Pcard3 img:hover {
+    transform: rotate(25deg) scale(1.25);
+    transition: transform 0.2s ease-in-out;
+}
+
+.Pcard4 {
+    position: absolute;
+    top: 125px;           
+    left: 70%;          
+    transform: translate(-50%, -50%); /* Center logo vertically and horizontally */
+    z-index: 0; /* Ensure the logo stays on top of the blurred background */
+    transform: rotate(5deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.Pcard4:hover {
+    z-index: 2; /* Raise z-index on hover to make Pcard2 overlap Pcard1 */
+    transition: transform 0.2s ease-in-out;
+}
+
+.Pcard4 img {
+    width: 250px; /* Set logo size */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.Pcard4 img:hover {
+    transform: rotate(-20deg) scale(1.15);
+    transition: transform 0.2s ease-in-out;
 }
