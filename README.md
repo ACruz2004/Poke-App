@@ -1,10 +1,10 @@
-Day 1:
+Day 1: Starting out 
 <img width="1470" alt="Screenshot 2024-10-08 at 1 12 10 AM" src="https://github.com/user-attachments/assets/56fe729c-5f56-4cd4-b764-a501a3a3e8a1">
 
-Day 2:
+Day 2: Added clickable items and CSS
 <img width="1470" alt="Screenshot 2024-10-08 at 8 46 59 PM" src="https://github.com/user-attachments/assets/8635d0fa-00bc-4f2d-a473-877500f50b9d">
 
-Day 3:
+Day 3: Starting Parallax, it looks okay right now
 <img width="1470" alt="Screenshot 2024-10-10 at 5 22 55 PM" src="https://github.com/user-attachments/assets/8608e212-e594-4308-b26c-f9cd012a9576">
 
 DAY 4 (CRAZYYYY WORRRRKKKKK)
