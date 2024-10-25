@@ -13,22 +13,20 @@ interface MakeHeadProps {
     handleToggle: () => void;
 }
 
-const [viewNumber, setView] = useState(1);
-const handleView = (id: number) => {
-  setView((prev) => (prev = id));
-};
+export type View = 'home' | 'sets' | 'my sets' | 'about';
 
-export function setViewNumber(viewArg: number) {
-    handleView(viewArg);
+interface ViewProps {
+    view: View;
+    handleView: (action: View) => void
 }
 
-function currentView(toggleNode: number, handleToggle: () => void) {
-    switch (viewNumber) {
-        case 1:
+function currentView(toggleNode: number, handleToggle: () => void, view: View, handleView: (action: View) => void) {
+    switch (view) {
+        case 'home':
             return (
                 <div>
                     <div className={"container"}>
-                        <MakeHead toggleNode={toggleNode} handleToggle={handleToggle} />
+                        <MakeHead toggleNode={toggleNode} handleToggle={handleToggle} handleView={handleView} />
                     </div>
                     <div className="bgVid">
                         <MakeHeadVid />
@@ -57,33 +55,48 @@ function currentView(toggleNode: number, handleToggle: () => void) {
                 </div>
             );
 
-        case 2:
+        case 'sets':
             return (
                 <div>
-                    <h1>Quit slacking Anthony!</h1>
+                    <div className={"container"}>
+                        <MakeHead toggleNode={toggleNode} handleToggle={handleToggle} handleView={handleView} />
+                    </div>
+                    <div>
+                        <h1>Quit slacking Anthony1!</h1>
+                    </div>
                 </div>
             );
 
-        case 3:
+        case 'my sets':
             return (
                 <div>
-                    <h1>Quit slacking Anthony!</h1>
+                    <div className={"container"}>
+                        <MakeHead toggleNode={toggleNode} handleToggle={handleToggle} handleView={handleView} />
+                    </div>
+                    <div>
+                        <h1>Quit slacking Anthony2!</h1>
+                    </div>
                 </div>
             );
 
-        case 4:
+        case 'about':
             return (
                 <div>
-                    <h1>Quit slacking Anthony!</h1>
+                    <div className={"container"}>
+                        <MakeHead toggleNode={toggleNode} handleToggle={handleToggle} handleView={handleView} />
+                    </div>
+                    <div>
+                        <h1>Quit slacking Anthony3!</h1>
+                    </div>
                 </div>
             );
     }
 };
 
-const CurrentView: React.FC<MakeHeadProps> = ({toggleNode, handleToggle}) => {
+const CurrentView: React.FC<MakeHeadProps & ViewProps> = ({ toggleNode, handleToggle, view, handleView }) => {
     return (
         <div>
-            {currentView(toggleNode, handleToggle)}
+            {currentView(toggleNode, handleToggle, view, handleView)}
         </div>
     );
 }
