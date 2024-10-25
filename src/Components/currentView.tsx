@@ -9,8 +9,8 @@ import React from "react";
 import { useState } from "react";
 
 interface MakeHeadProps {
-    toggleNode: number;
-    handleToggle: () => void;
+  toggleNode: number;
+  handleToggle: () => void;
 }
 
 export type View = 'home' | 'sets' | 'my sets' | 'about';
@@ -101,4 +101,4 @@ const CurrentView: React.FC<MakeHeadProps & ViewProps> = ({ toggleNode, handleTo
     );
 }
 
-export default CurrentView
+export default CurrentView;
