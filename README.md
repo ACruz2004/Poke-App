@@ -11,6 +11,7 @@ DAY 4 (CRAZYYYY WORRRRKKKKK)
 The Parallax and the card hovers are soooooo goooooooooooooood
 <img width="1470" alt="Screenshot 2024-10-10 at 8 43 00 PM" src="https://github.com/user-attachments/assets/010744aa-c6a4-4f5b-9be6-e61cd1467aac">
 
+DAY ?: Added view switching between tabs. Better get to work, Anthony!!!
 
 # React + TypeScript + Vite
 
