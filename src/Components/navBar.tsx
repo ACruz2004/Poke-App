@@ -2,8 +2,6 @@
 import logo from "../assets/pokeBall.png";
 import makeNight from "../assets/day.png";
 import makeDay from "../assets/night.png";
-import searchLight from "../assets/search-b.png";
-import searchDark from "../assets/search-w.png";
 import React from "react";
 import currentView, { setViewNumber } from "./currentView";
 
@@ -14,8 +12,8 @@ interface MakeHeadProps {
 
 const MakeHead: React.FC<MakeHeadProps> = ({ toggleNode, handleToggle }) => {
   const onClickHandler = (id: number) => () => {
-    setViewNumber(id)
-  }
+    setViewNumber(id);
+  };
 
   return (
     <div className={toggleNode == 1 ? "nav" : "navDark"}>
@@ -24,10 +22,30 @@ const MakeHead: React.FC<MakeHeadProps> = ({ toggleNode, handleToggle }) => {
         PokéTrove
       </h1>
       <ul>
-        <li className={toggleNode == 1 ? "light" : "dark "} onClick={onClickHandler(1)}>Home</li>
-        <li className={toggleNode == 1 ? "light" : "dark "} onClick={onClickHandler(2)}>Sets</li>
-        <li className={toggleNode == 1 ? "light" : "dark "} onClick={onClickHandler(3)}>My Sets</li>
-        <li className={toggleNode == 1 ? "light" : "dark "} onClick={onClickHandler(4)}>About</li>
+        <li
+          className={toggleNode == 1 ? "light" : "dark "}
+          onClick={onClickHandler(1)}
+        >
+          Home
+        </li>
+        <li
+          className={toggleNode == 1 ? "light" : "dark "}
+          onClick={onClickHandler(2)}
+        >
+          Sets
+        </li>
+        <li
+          className={toggleNode == 1 ? "light" : "dark "}
+          onClick={onClickHandler(3)}
+        >
+          My Sets
+        </li>
+        <li
+          className={toggleNode == 1 ? "light" : "dark "}
+          onClick={onClickHandler(4)}
+        >
+          About
+        </li>
       </ul>
 
       <img

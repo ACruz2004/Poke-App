@@ -44,7 +44,10 @@ const App = () => {
     //     <MakeGround toggleNode={toggleNode} handleToggle={handleToggle} />
     //   </div>
     // </div>
-    <CurrentView toggleNode={toggleNode} handleToggle={handleToggle}></CurrentView>
+    <CurrentView
+      toggleNode={toggleNode}
+      handleToggle={handleToggle}
+    ></CurrentView>
   );
 };
 

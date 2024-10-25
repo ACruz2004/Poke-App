@@ -222,7 +222,7 @@ video {
 }
 
 .Pcard3 img:hover {
-    transform: rotate(25deg) scale(1.25);
+    transform: rotate(25deg) scale(1.30);
     transition: transform 0.2s ease-in-out;
 }
 
