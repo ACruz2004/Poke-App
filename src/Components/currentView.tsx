@@ -1,12 +1,8 @@
-import MakeHead from "./navBar";
-import MakeBody from "./body";
-import MakeGround from "./ground";
-import MakeHeadVid from "./bgvid";
-import ImageShroud from "../ImageShrouded";
-import ImageStellar from "../ImageStellar";
-import ImageTwilight from "../ImageTwilight";
 import React from "react";
-import { useState } from "react";
+import HomeView from "../View/homeView";
+import SetsView from "../View/setsView";
+import MySetsView from "../View/mySetsView";
+import AboutView from "../View/aboutView";
 
 interface MakeHeadProps {
   toggleNode: number;
@@ -24,71 +20,22 @@ function currentView(toggleNode: number, handleToggle: () => void, view: View, h
     switch (view) {
         case 'home':
             return (
-                <div>
-                    <div className={"container"}>
-                        <MakeHead toggleNode={toggleNode} handleToggle={handleToggle} handleView={handleView} />
-                    </div>
-                    <div className="bgVid">
-                        <MakeHeadVid />
-                    </div>
-                    <div className="bodyCont">
-                        <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
-                    </div>
-                    <div>
-                        <ImageStellar />
-                    </div>
-                    <div className="bodyCont">
-                        <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
-                    </div>
-                    <div>
-                        <ImageShroud />
-                    </div>
-                    <div className="bodyCont">
-                        <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
-                    </div>
-                    <div>
-                        <ImageTwilight />
-                    </div>
-                    <div className="bodyCont">
-                        <MakeGround toggleNode={toggleNode} handleToggle={handleToggle} />
-                    </div>
-                </div>
+                <HomeView toggleNode={toggleNode} handleToggle={handleToggle} handleView={handleView}></HomeView>
             );
 
         case 'sets':
             return (
-                <div>
-                    <div className={"container"}>
-                        <MakeHead toggleNode={toggleNode} handleToggle={handleToggle} handleView={handleView} />
-                    </div>
-                    <div>
-                        <h1>Quit slacking Anthony1!</h1>
-                    </div>
-                </div>
+                <SetsView toggleNode={toggleNode} handleToggle={handleToggle} handleView={handleView}></SetsView>
             );
 
         case 'my sets':
             return (
-                <div>
-                    <div className={"container"}>
-                        <MakeHead toggleNode={toggleNode} handleToggle={handleToggle} handleView={handleView} />
-                    </div>
-                    <div>
-                        <h1>Quit slacking Anthony2!</h1>
-                    </div>
-                </div>
+                <MySetsView toggleNode={toggleNode} handleToggle={handleToggle} handleView={handleView}></MySetsView>
             );
 
         case 'about':
             return (
-                <div>
-                    <div className={"container"}>
-                        <MakeHead toggleNode={toggleNode} handleToggle={handleToggle} handleView={handleView} />
-                    </div>
-                    <div>
-                        <h1>Quit slacking Anthony3!</h1>
-                    </div>
-                </div>
+                <AboutView toggleNode={toggleNode} handleToggle={handleToggle} handleView={handleView}></AboutView>
             );
     }
 };
