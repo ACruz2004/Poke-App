@@ -1,3 +1,4 @@
+// For Shrouded Fable
 import { Parallax } from "react-parallax";
 import Shrouded from "../assets/Shrouded/ShroudedFableBGIMG.jpeg";
 import Logo from "../assets/Shrouded/ShroudedFableLogo.png";

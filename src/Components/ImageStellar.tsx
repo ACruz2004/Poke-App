@@ -1,3 +1,4 @@
+// For Stellar
 import { Parallax } from "react-parallax";
 import Stellar from "../assets/Stellar/StellarCrownBGIMG.jpeg";
 import Logo from "../assets/Stellar/StellarCrownLogo.png";
