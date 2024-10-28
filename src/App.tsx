@@ -1,11 +1,3 @@
-// App
-// import MakeHeadVid from "./Components/bgvid";
-// import MakeBody from "./Components/body";
-// import MakeHead from "./Components/navBar";
-// import MakeGround from "./Components/ground";
-// import ImageStellar from "./ImageStellar";
-// import ImageShroud from "./ImageShrouded";
-// import ImageTwilight from "./ImageTwilight";
 import CurrentView from "./Components/currentView";
 import { useState } from "react";
 import { View } from "./Components/currentView";
@@ -31,40 +23,11 @@ const App = () => {
         setView('about');
         break;
       default:
-        throw new Error('Unknown action');
+        throw new Error('Unknown view');
     }
   };
 
   return (
-    // <div>
-    //   <div className={"container"}>
-    //     <MakeHead toggleNode={toggleNode} handleToggle={handleToggle} />
-    //   </div>
-    //   <div className="bgVid">
-    //     <MakeHeadVid />
-    //   </div>
-    //   <div className="bodyCont">
-    //     <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
-    //   </div>
-    //   <div>
-    //     <ImageStellar />
-    //   </div>
-    //   <div className="bodyCont">
-    //     <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
-    //   </div>
-    //   <div>
-    //     <ImageShroud />
-    //   </div>
-    //   <div className="bodyCont">
-    //     <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
-    //   </div>
-    //   <div>
-    //     <ImageTwilight />
-    //   </div>
-    //   <div className="bodyCont">
-    //     <MakeGround toggleNode={toggleNode} handleToggle={handleToggle} />
-    //   </div>
-    // </div>
     <CurrentView toggleNode={toggleNode} handleToggle={handleToggle} view={view} handleView={handleView}></CurrentView>
   );
 };

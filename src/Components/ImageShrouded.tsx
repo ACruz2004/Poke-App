@@ -1,10 +1,10 @@
 // For Shrouded Fable
 import { Parallax } from "react-parallax";
-import Shrouded from "./assets/Shrouded/ShroudedFableBGIMG.jpeg";
-import Logo from "./assets/Shrouded/ShroudedFableLogo.png";
-import card1 from "./assets/Shrouded/ShroudedFableCard1.png";
-import card2 from "./assets/Shrouded/ShroudedFableCard2.png";
-import card3 from "./assets/Shrouded/ShroudedFableOkidogi.png";
+import Shrouded from "../assets/Shrouded/ShroudedFableBGIMG.jpeg";
+import Logo from "../assets/Shrouded/ShroudedFableLogo.png";
+import card1 from "../assets/Shrouded/ShroudedFableCard1.png";
+import card2 from "../assets/Shrouded/ShroudedFableCard2.png";
+import card3 from "../assets/Shrouded/ShroudedFableOkidogi.png";
 
 const ImageShroud = () => (
   <Parallax className="Pimage" bgImage={Shrouded} strength={200}>

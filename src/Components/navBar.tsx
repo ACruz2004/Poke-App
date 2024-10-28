@@ -2,8 +2,6 @@
 import logo from "../assets/pokeBall.png";
 import makeNight from "../assets/day.png";
 import makeDay from "../assets/night.png";
-import searchLight from "../assets/search-b.png";
-import searchDark from "../assets/search-w.png";
 import React, { act } from "react";
 import { View } from "./currentView";
 

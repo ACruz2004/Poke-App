@@ -1,9 +1,9 @@
 // For Stellar
 import { Parallax } from "react-parallax";
-import Stellar from "./assets/Stellar/StellarCrownBGIMG.jpeg";
-import Logo from "./assets/Stellar/StellarCrownLogo.png";
-import card1 from "./assets/Stellar/StellarCrownPackB.png";
-import card2 from "./assets/Stellar/StellarCrownPackL.png";
+import Stellar from "../assets/Stellar/StellarCrownBGIMG.jpeg";
+import Logo from "../assets/Stellar/StellarCrownLogo.png";
+import card1 from "../assets/Stellar/StellarCrownPackB.png";
+import card2 from "../assets/Stellar/StellarCrownPackL.png";
 
 // This is gonna be a pack display not a card one
 const ImageStellar = () => (
