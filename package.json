@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
-    "firebase": "^11.0.1",
     "react": "^18.3.1",
     "react-app": "file:",
     "react-dom": "^18.3.1",
