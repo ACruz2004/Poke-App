@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Sets {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.cardBox {
+    width: 320px;
+    overflow: hidden;
+    max-height: 470px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cardBox img {
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
+}
+
+.setName {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 10px;
+}
+
+.setName h2 {
+    font-size: 25px;
+    color: rgb(169, 2, 2)
+}
+
+.collectionStats {
+    margin: 8px 0px;
+    font-size: 20px;
+    color: #222;
+    font-weight: bold;
+
+}
+
+.addTo {
+    margin-top: 20px;
+    outline: none;
+    border: 1px solid rgb(169, 2, 2);
+    padding: 12px 32px;
+    border-radius: 40px;
+    background: none;
+    color: rgb(169, 2, 2);
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.addTo:hover {
+    background: rgb(169, 2, 2);
+    color: #fff;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
