@@ -1,7 +1,8 @@
 import React from "react";
 import MakeHead from "../Components/navBar";
+import MakeHeadVidSets from "../Components/bgvidSets";
+import MakeBody from "../Components/body";
 import { View } from "../Components/currentView";
-import ImageTwilight from "../Components/ImageTwilight";
 
 interface ModeProps {
   toggleNode: number;
@@ -23,8 +24,11 @@ const SetsView: React.FC<ModeProps> = ({
           handleView={handleView}
         />
       </div>
-      <div>
-        <ImageTwilight />
+      <div className="bgVid">
+        <MakeHeadVidSets />
+      </div>
+      <div className="bodyCont">
+        <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
       </div>
     </div>
   );
