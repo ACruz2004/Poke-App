@@ -1,0 +1,47 @@
+.bod {
+    background: scroll;
+    background-color: #f6f8f9;
+    color: #222;
+    width: 100%;
+    height: 10vh;
+    z-index: 1;
+    box-shadow: 0 0 2px #222, 0 0 5px #222;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.bodDark {
+    background: scroll;
+    background-color: #222;
+    color: #f6f8f9;
+    box-shadow: 0 0 10px #f6f8f9, 0 0 10px #f6f8f9;
+    width: 100%;
+    height: 10vh;
+    z-index: 1;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.ground {
+    background: scroll;
+    background-color: #f6f8f9;
+    color: #222;
+    width: 100%;
+    height: 20vh;
+    z-index: 1;
+    box-shadow: 0 0 2px #222, 0 0 5px #222;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.groundDark {
+    background: scroll;
+    background-color: #222;
+    color: #f6f8f9;
+    box-shadow: 0 0 10px #f6f8f9, 0 0 10px #f6f8f9;
+    width: 100%;
+    height: 20vh;
+    z-index: 1;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+}
