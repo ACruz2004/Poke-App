@@ -5,6 +5,7 @@ import getHashCode from "./Data/encryptor.js";
 import "./Style/index.css";
 import "./Style/navBar.css";
 import "./Style/bod.css";
+import "./Style/input.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
