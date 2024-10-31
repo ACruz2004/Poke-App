@@ -13,6 +13,10 @@ The Parallax and the card hovers are soooooo goooooooooooooood
 
 DAY ?: Added view switching between tabs.
 
+DAY ?+1: Added Content to Sets Tab, Also Added Way to Easily Add/Remove Cards
+<img width="1470" alt="Screenshot 2024-10-30 at 5 59 58 PM" src="https://github.com/user-attachments/assets/2a287c1c-6195-488d-a77c-1a4d193bd5ee">
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
