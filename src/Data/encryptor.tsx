@@ -1,6 +1,6 @@
-import { sha3_512 } from "js-sha3";
+import CryptoJS from "crypto-js";
 
-const hash = sha3_512('meldinIsCoolbean'); //test password
+const hash = CryptoJS.SHA3('meldinIsCoolbean'); //test password
 
 function getHashCode() {
     return hash

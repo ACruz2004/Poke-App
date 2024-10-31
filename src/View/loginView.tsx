@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MakeHead from "../Components/navBar";
 import { View } from "../Components/currentView";
-import getHashCode from "../Data/encryptor";
+import MakeBody from "../Components/body";
 
 interface ModeProps {
     toggleNode: number;
@@ -23,27 +23,15 @@ const LoginView: React.FC<ModeProps> = ({ toggleNode, handleToggle, handleView }
             <div className={"container"}>
                 <MakeHead toggleNode={toggleNode} handleToggle={handleToggle} handleView={handleView} />
             </div>
-            <table>
-                <thead>
-                    <th>Name</th>
-                    <th>Gender</th>
-                    <th>Phone</th>
-                    <th>Address</th>
-                </thead>
-                <tbody>
-                    {/* {data.map((d, i) => (
-                        <tr key={i}>
-                            <td>{d.Name}</td>
-                            <td>{d.Gender}</td>
-                            <td>{d.Phone}</td>
-                            <td>{d.Address}</td>
-                        </tr>
-                    ))} */}
-                    <div>
-                        {getHashCode()}
-                    </div>
-                </tbody>
-            </table>
+            <div className="bodyCont">
+                <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
+            </div>
+            <div>
+                <input
+                    value="username"
+                    placeholder="Enter your username here"
+                />
+            </div>
         </div>
     );
 }
