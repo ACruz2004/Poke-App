@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MakeHead from "../Components/navBar";
 import { View } from "../Components/currentView";
+import getHashCode from "../Data/encryptor";
 
 interface ModeProps {
     toggleNode: number;
@@ -30,14 +31,17 @@ const LoginView: React.FC<ModeProps> = ({ toggleNode, handleToggle, handleView }
                     <th>Address</th>
                 </thead>
                 <tbody>
-                    {data.map((d, i) => (
+                    {/* {data.map((d, i) => (
                         <tr key={i}>
                             <td>{d.Name}</td>
                             <td>{d.Gender}</td>
                             <td>{d.Phone}</td>
                             <td>{d.Address}</td>
                         </tr>
-                    ))}
+                    ))} */}
+                    <div>
+                        {getHashCode()}
+                    </div>
                 </tbody>
             </table>
         </div>
