@@ -1,0 +1,34 @@
+.inputBox {
+    height: 48px;
+    width: 400px;
+    font-size: large;
+    border-radius: 8px;
+    border: 1px solid grey;
+    padding-left: 8px;
+    justify-content: center;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding-top: 25px;
+}
+
+.inputButton {
+    outline: none;
+    border: 1px solid rgb(2, 169, 161);
+    padding: 12px 32px;
+    border-radius: 40px;
+    background: none;
+    color: rgb(2, 169, 161);
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .1s linear;
+}
+
+.inputButton:hover {
+    background: rgb(2, 169, 161);
+    color: #fff;
+}
