@@ -63,7 +63,7 @@ video {
 
 .inputBoxUser:focus,
 .inputBoxPass:focus {
-    border: 1px solid rgb(68, 202, 97);
+    border: 1px solid rgb(202, 68, 68);
     outline: none;
 }
 
