@@ -71,7 +71,7 @@ video {
     display: flex;
     flex-direction: column;
     gap: 14px;
-    margin-top: 40px; 
+    margin-top: 20px; 
 }
 
 .logoTextLog {
@@ -151,6 +151,13 @@ video {
     font-style: italic;
     font-weight: bold;
     font-size: 15px;
-    /* padding-left: 85px; */
     margin: auto;
+}
+
+.errorText {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(151, 17, 17);
 }

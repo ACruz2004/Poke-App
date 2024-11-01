@@ -21,20 +21,25 @@ const LoginView: React.FC<ModeProps> = ({
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
-  const handleSubmit = async () => {
-    const hashedName = Hash(username).toString();
-    const hashedPassword = Hash(password).toString();
+  const [error, setError] = useState<string>("");
 
-    try {
-      const response = await axios.post("http://localhost:8080/add-data", {
-        username: hashedName,
-        password: hashedPassword,
-      });
-      setUsername("");
-      setPassword("");
-      console.log(response);
-    } catch (error) {
-      console.error("There was an error!", error);
+  const handleSubmit = async () => {
+    if (!username || !password) setError("Please fill in all of the forms")
+    else {
+      const hashedName = Hash(username).toString();
+      const hashedPassword = Hash(password).toString();
+
+      try {
+        const response = await axios.post("http://localhost:8080/add-data", {
+          username: hashedName,
+          password: hashedPassword,
+        });
+        setUsername("");
+        setPassword("");
+        console.log(response);
+      } catch (error) {
+        console.error("There was an error!", error);
+      }
     }
   };
 
@@ -50,6 +55,7 @@ const LoginView: React.FC<ModeProps> = ({
       </div>
       <div className="inputContainer">
         <h1 className="logoTextLog">PokéTrove</h1>
+        {error && <span className="errorText">{error}</span>}
         <div className="inputGroup">
           <div className="logText">Username</div>
           <form>
