@@ -100,12 +100,12 @@ video {
 .inputButton {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     outline: none;
-    border: 1px solid rgb(71, 156, 65);
+    border: 1px solid rgb(156, 65, 65);
     padding: 15px 32px;
     border-radius: 12px;
     background: none;
-    background: rgb(71, 156, 65);
-    color: rgb(210, 255, 207);
+    background: rgb(156, 65, 65);
+    color: rgb(255, 207, 207);
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
@@ -113,19 +113,19 @@ video {
 }
 
 .inputButton:hover {
-    background: rgb(42, 93, 39);
-    color: #799b7a;
+    background: rgb(93, 39, 39);
+    color: #9b7979;
 }
 
 .inputButtonCreate {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     outline: none;
-    border: 2px solid rgb(71, 156, 65);
+    border: 2px solid rgb(156, 65, 65);
     padding: 15px 32px;
     border-radius: 12px;
     background: none;
     background: rgb(255, 255, 255);
-    color: rgb(50, 169, 40);
+    color: rgb(169, 40, 40);
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
