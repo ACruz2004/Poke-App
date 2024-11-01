@@ -133,8 +133,8 @@ video {
 }
 
 .inputButtonCreate:hover {
-    background: rgb(157, 227, 154);
-    color: rgb(69, 104, 66);
+    background: rgb(227, 154, 154);
+    color: rgb(104, 66, 66);
 }
 
 .logText {
