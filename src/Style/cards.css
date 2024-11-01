@@ -70,7 +70,7 @@
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
-    transition: .3s linear;
+    transition: .15s linear;
 }
 
 .addTo:hover {

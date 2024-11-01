@@ -1,27 +1,64 @@
+.bgVidLog {
+    position: relative; /* Allows content within to be layered relative to each other */
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* Ensures the video covers the full screen */
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers the full background */
+    z-index: -1; /* Keeps video behind other elements */
+}
+
 .inputBox {
     height: 48px;
     width: 400px;
     font-size: large;
     border-radius: 8px;
-    border: 1px solid grey;
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(139, 139, 139);
+    background: rgb(73, 73, 73);
     padding-left: 8px;
-    justify-content: center;
+    margin-top: 10px;
+    justify-content: left;
+}
+
+.logoTextLog {
+    padding: 15px 32px;
+    font-family: PokeFont;
+    font-size: 50px;
+    margin-top: -80px; /* Adjust this value as needed to control the position */
 }
 
 .inputContainer {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    padding-top: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #d4d4d47d;
+    padding: 80px 60px 60px;
+    border-radius: 12px;
+    width: 450px; 
+    height: 500px;
+    margin: auto;
+    margin-top: 8%;
+    z-index: 2; 
+    gap: 10px;
 }
 
 .inputButton {
     outline: none;
-    border: 1px solid rgb(2, 169, 161);
-    padding: 12px 32px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 15px 32px;
     border-radius: 40px;
     background: none;
-    color: rgb(2, 169, 161);
+    background: rgb(73, 73, 73);
+    color: rgb(139, 139, 139);
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
@@ -29,6 +66,6 @@
 }
 
 .inputButton:hover {
-    background: rgb(2, 169, 161);
-    color: #fff;
+    background: rgb(255, 255, 255);
+    color: #000000;
 }
