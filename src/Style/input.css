@@ -83,6 +83,7 @@ video {
 .inputContainer {
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
     justify-content: center;
     background-color: #f1f1f1;
@@ -142,6 +143,7 @@ video {
     font-style: italic;
     font-weight: bold;
     font-size: 15px;
+    text-align: left;
     
 }
 
@@ -150,6 +152,6 @@ video {
     font-style: italic;
     font-weight: bold;
     font-size: 15px;
-    padding-left: 85px;
+    margin: auto;
     
 }
