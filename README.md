@@ -16,6 +16,10 @@ DAY ?: Added view switching between tabs.
 DAY ?+1: Added Content to Sets Tab, Also Added Way to Easily Add/Remove Cards
 <img width="1470" alt="Screenshot 2024-10-30 at 5 59 58 PM" src="https://github.com/user-attachments/assets/2a287c1c-6195-488d-a77c-1a4d193bd5ee">
 
+DAY? + 3?
+Added more CSS Elements to Login page and LOGO CHANGE "W"
+<img width="1470" alt="Screenshot 2024-11-01 at 10 41 13 AM" src="https://github.com/user-attachments/assets/7b8e0591-bab5-434f-a8bb-c5f8d1cc3958">
+
 
 # React + TypeScript + Vite
 
