@@ -3,7 +3,9 @@ const mysql = require('mysql');
 const cors = require('cors');
 
 const app = express()
+const PORT = 8080
 app.use(cors())
+app.use(express.json())
 
 const db = mysql.createConnection({
     host: "localhost",
@@ -16,14 +18,25 @@ app.get('/', (re, res) => {
     return res.json("From Backend Side")
 })
 
-app.get('/crud', (req, res)=>{
-    const sql = "SELECT * FROM crud"
-    db.query(sql, (err, data)=> {
-        if (err) return res.json(err)
-        return res.json(data)
-    })
-})
+app.get('/get-data', (re, res) => {
+    const query = 'SELECT * FROM users';
+    db.query(query, (err, result) => {
+        if (err) res.send(err);
+        else res.send(result);
+    });
+});
 
-app.listen(8081, ()=> {
+app.post('/add-data', (req, res) => {
+    data = req.body;
+    username = data['username'];
+    password = data['password'];
+    const query = 'INSERT INTO users (username, password) VALUES (?, ?)';
+    db.query(query, [username, password], (err, result) => {
+        if (err) res.send(err);
+        else res.send(data);
+    });
+});
+
+app.listen(PORT, () => {
     console.log("listening");
 })
