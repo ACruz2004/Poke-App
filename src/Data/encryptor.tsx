@@ -1,9 +1,7 @@
 import CryptoJS from "crypto-js";
 
-const hash = CryptoJS.SHA3('meldinIsCoolbean'); //test password
-
-function getHashCode() {
-    return hash
+function Hash(password: string) {
+    return CryptoJS.SHA3(password)
 }
 
-export default getHashCode;
+export default Hash;

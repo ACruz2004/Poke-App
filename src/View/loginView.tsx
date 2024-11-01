@@ -2,6 +2,9 @@ import React, { useState, useEffect, ChangeEvent, useRef } from "react";
 import MakeHead from "../Components/navBar";
 import videobg from "../assets/4K_3.mp4";
 import { View } from "../Components/currentView";
+import MakeBody from "../Components/body";
+import Hash from "../Data/encryptor";
+import axios from "axios";
 
 interface ModeProps {
   toggleNode: number;
@@ -15,16 +18,25 @@ const LoginView: React.FC<ModeProps> = ({
   handleView,
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:8081/crud")
-      .then((res) => res.json())
-      .then((data) => setData(data))
-      .catch((err) => console.log(err));
-  }, []);
 
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+      
+    const handleSubmit = async () => {
+        const hashedName = Hash(username).toString();
+        const hashedPassword = Hash(password).toString();
+
+        try {
+            // { username: hashedName, password: hashedPassword }
+            const response = await axios.post('http://localhost:8080/add-data', { username: hashedName, password: hashedPassword });
+            // alert(response.data);
+            setUsername('');
+            setPassword('');
+            console.log(response);
+        } catch (error) {
+            console.error('There was an error!', error);
+        }
+    };
 
   return (
     <div className="bgVidLog">
@@ -54,7 +66,7 @@ const LoginView: React.FC<ModeProps> = ({
             className={"inputBox"}
           />
         </form>
-        <button className="inputButton">Log In</button>
+        <button className="inputButton" onClick={handleSubmit}>Log In</button>
       </div>
     </div>
   );
