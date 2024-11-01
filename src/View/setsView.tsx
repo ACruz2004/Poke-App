@@ -1,6 +1,7 @@
 import React from "react";
 import MakeHead from "../Components/navBar";
 import MakeHeadVidSets from "../Components/bgvidSets";
+import MakeGround from "../Components/ground";
 import MakeBody from "../Components/body";
 import Card from "../Components/card";
 import "../Style/cards.css";
@@ -34,6 +35,9 @@ const SetsView: React.FC<ModeProps> = ({
       </div>
       <div className="Sets">
         <Card />
+      </div>
+      <div className="bodyCont">
+        <MakeGround toggleNode={toggleNode} handleToggle={handleToggle} />
       </div>
     </div>
   );

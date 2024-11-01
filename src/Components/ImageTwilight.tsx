@@ -1,6 +1,6 @@
 // For Twilght
 import { Parallax } from "react-parallax";
-import Twilight from "../assets/Twilight/TwilightmasBGIMG.jpeg"
+import Twilight from "../assets/Twilight/TwilightmasBGIMG.jpeg";
 import Logo from "../assets/Twilight/TwilightMasLogo.png";
 import card1 from "../assets/Twilight/TwilightMasCard1.png";
 import card2 from "../assets/Twilight/TwilightMasCard2.png";

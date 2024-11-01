@@ -6,7 +6,7 @@ import card1 from "../assets/Stellar/stellarCrownCard1.png";
 import card2 from "../assets/Stellar/stellarCrownCard2.png";
 import card3 from "../assets/Stellar/stellarCrownCard3.png";
 
-// This is gonna be a pack display not a card one
+// This is gonna be a pack display not a card one jk I lied the cards
 const ImageStellar = () => (
   <Parallax className="Pimage" bgImage={Stellar} strength={200}>
     <div className="Plogo">

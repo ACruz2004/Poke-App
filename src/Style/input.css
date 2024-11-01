@@ -1,8 +1,12 @@
 .bgVidLog {
-    position: relative; /* Allows content within to be layered relative to each other */
-    width: 100%;
+    position: relative; 
     height: 100vh;
-    overflow: hidden; /* Ensures the video covers the full screen */
+    overflow: hidden;
+    background-image: url("../assets/pokeBackdrop.png"); 
+    background-position: 50%;
+    background-position-y: 70px;
+    background-size: 49%;
+    background-repeat: no-repeat;
 }
 
 video {
@@ -15,24 +19,65 @@ video {
     z-index: -1; /* Keeps video behind other elements */
 }
 
-.inputBox {
+.BDimage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Places the backdrop between the video and input container */
+    overflow: hidden;
+}
+
+.BDlogo img {
+    width: 50%; /* Adjust size if needed */
+    height: auto;
+}
+
+.inputBoxUser {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     height: 48px;
-    width: 400px;
+    width: 350px;
     font-size: large;
     border-radius: 8px;
     border: 1px solid rgb(0, 0, 0);
-    color: rgb(139, 139, 139);
+    color: rgb(255, 255, 255);
     background: rgb(73, 73, 73);
     padding-left: 8px;
     margin-top: 10px;
     justify-content: left;
 }
 
+.inputBoxPass {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 48px;
+    width: 350px;
+    font-size: large;
+    border-radius: 8px;
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(251, 251, 251);
+    background: rgb(73, 73, 73);
+    padding-left: 8px;
+    justify-content: left;
+}
+
+.inputBoxUser:focus,
+.inputBoxPass:focus {
+    border: 1px solid rgb(68, 202, 97);
+    outline: none;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 40px; 
+}
+
 .logoTextLog {
-    padding: 15px 32px;
     font-family: PokeFont;
     font-size: 50px;
-    margin-top: -80px; /* Adjust this value as needed to control the position */
+    margin-top: -50px; 
 }
 
 .inputContainer {
@@ -40,10 +85,11 @@ video {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #d4d4d4;
+    background-color: #f1f1f1;
+    box-shadow: 0px 0px 55px rgba(0, 0, 0, 0.596);
     padding: 80px 60px 60px;
     border-radius: 12px;
-    width: 450px; 
+    width: 400px; 
     height: 500px;
     margin: auto;
     margin-top: 8%;
@@ -52,13 +98,14 @@ video {
 }
 
 .inputButton {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     outline: none;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(71, 156, 65);
     padding: 15px 32px;
-    border-radius: 40px;
+    border-radius: 12px;
     background: none;
-    background: rgb(73, 73, 73);
-    color: rgb(139, 139, 139);
+    background: rgb(71, 156, 65);
+    color: rgb(210, 255, 207);
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
@@ -66,6 +113,43 @@ video {
 }
 
 .inputButton:hover {
+    background: rgb(42, 93, 39);
+    color: #799b7a;
+}
+
+.inputButtonCreate {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    outline: none;
+    border: 2px solid rgb(71, 156, 65);
+    padding: 15px 32px;
+    border-radius: 12px;
+    background: none;
     background: rgb(255, 255, 255);
-    color: #000000;
+    color: rgb(50, 169, 40);
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .1s linear;
+}
+
+.inputButtonCreate:hover {
+    background: rgb(157, 227, 154);
+    color: rgb(69, 104, 66);
+}
+
+.logText {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 15px;
+    
+}
+
+.logTextMid {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 15px;
+    padding-left: 80px;
+    
 }

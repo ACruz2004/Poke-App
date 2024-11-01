@@ -9,43 +9,51 @@ import React from "react";
 import { View } from "../Components/currentView";
 
 interface ModeProps {
-    toggleNode: number;
-    handleToggle: () => void;
-    handleView: (id: View) => void;
+  toggleNode: number;
+  handleToggle: () => void;
+  handleView: (id: View) => void;
 }
 
-const HomeView: React.FC<ModeProps> = ({ toggleNode, handleToggle, handleView }) => {
-    return (
-        <div>
-            <div className={"container"}>
-                <MakeHead toggleNode={toggleNode} handleToggle={handleToggle} handleView={handleView} />
-            </div>
-            <div className="bgVid">
-                <MakeHeadVid />
-            </div>
-            <div className="bodyCont">
-                <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
-            </div>
-            <div>
-                <ImageStellar />
-            </div>
-            <div className="bodyCont">
-                <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
-            </div>
-            <div>
-                <ImageShroud />
-            </div>
-            <div className="bodyCont">
-                <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
-            </div>
-            <div>
-                <ImageTwilight />
-            </div>
-            <div className="bodyCont">
-                <MakeGround toggleNode={toggleNode} handleToggle={handleToggle} />
-            </div>
-        </div>
-    );
-}
+const HomeView: React.FC<ModeProps> = ({
+  toggleNode,
+  handleToggle,
+  handleView,
+}) => {
+  return (
+    <div>
+      <div className={"container"}>
+        <MakeHead
+          toggleNode={toggleNode}
+          handleToggle={handleToggle}
+          handleView={handleView}
+        />
+      </div>
+      <div className="bgVid">
+        <MakeHeadVid />
+      </div>
+      <div className="bodyCont">
+        <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
+      </div>
+      <div>
+        <ImageStellar />
+      </div>
+      <div className="bodyCont">
+        <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
+      </div>
+      <div>
+        <ImageShroud />
+      </div>
+      <div className="bodyCont">
+        <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
+      </div>
+      <div>
+        <ImageTwilight />
+      </div>
+      <div className="bodyCont">
+        <MakeGround toggleNode={toggleNode} handleToggle={handleToggle} />
+      </div>
+    </div>
+  );
+};
 
 export default HomeView;
