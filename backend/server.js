@@ -48,14 +48,14 @@ app.post('/login', (req, res) => {
         if (err) return res.send(err)
         else {
             if (result.length === 0) {
-                res.status(404).send('User not found');
+                res.status(404).send('Incorrect credentials');
                 return
             }
 
             const storedPassword = result[0].password;
             
             if (!secureCompare(storedPassword, password)) {
-                res.status(404).send('Password is incorrect');
+                res.status(404).send('Incorrect credentials');
                 return
             } else {
                 res.status(200).send('User authenticated successfully');

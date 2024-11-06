@@ -41,6 +41,7 @@ const LogInView: React.FC<DataProps> = ({loginState, setLoginState, error, setEr
         console.log(response)
       } catch (error) {
         console.error("There was an error!", error);
+        setError(error.response.data)
       }
     }
   };
