@@ -1,7 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.js";
-import getHashCode from "./Data/encryptor.js";
 import "./Style/index.css";
 import "./Style/navBar.css";
 import "./Style/bod.css";

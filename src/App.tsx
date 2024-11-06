@@ -1,6 +1,43 @@
 import CurrentView from "./Components/currentView";
-import { useState } from "react";
+import { useState, createContext } from "react";
 import { View } from "./Components/currentView";
+
+interface CredentialsType {
+  username: string;
+  setUsername: (username: string) => void;
+  password: string;
+  setPassword: (password: string) => void;
+}
+
+export const CredentialsContext = createContext<CredentialsType>({
+  username: "",
+  setUsername: () => { },
+  password: "",
+  setPassword: () => { }
+});
+
+interface CredentialsProps {
+  children: React.ReactNode;
+}
+
+export const CredentialsProvider = ({ children }: CredentialsProps) => {
+  const [username, setUsername] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+
+  const updateUsername = (username: string) => setUsername(username)
+  const updatePassword = (password: string) => setPassword(password)
+
+  return (
+    <CredentialsContext.Provider value={{
+      username,
+      setUsername: updateUsername,
+      password,
+      setPassword: updatePassword
+    }}>
+      {children}
+    </CredentialsContext.Provider>
+  );
+}
 
 const App = () => {
   const [toggleNode, setToggleNode] = useState(1);
@@ -31,7 +68,9 @@ const App = () => {
   };
 
   return (
-    <CurrentView toggleNode={toggleNode} handleToggle={handleToggle} view={view} handleView={handleView}></CurrentView>
+    <CredentialsProvider>
+      <CurrentView toggleNode={toggleNode} handleToggle={handleToggle} view={view} handleView={handleView}></CurrentView>
+    </CredentialsProvider>
   );
 };
 
