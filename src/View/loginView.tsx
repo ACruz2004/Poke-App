@@ -34,11 +34,11 @@ const LogInView: React.FC<DataProps> = ({loginState, setLoginState, error, setEr
       try {
         const response = await axios.post("http://localhost:8080/login", {
           username: username,
-          password: Hash(password).toString(),
+          password: Hash(password).toString()
         });
         setUsername("");
         setPassword("");
-        console.log(response);
+        console.log(response)
       } catch (error) {
         console.error("There was an error!", error);
       }
@@ -112,7 +112,6 @@ const SignUpView: React.FC<DataProps> = ({loginState, setLoginState, error, setE
         });
         setUsername("");
         setPassword("");
-        console.log(response);
       } catch (error) {
         console.error("There was an error!", error);
       }

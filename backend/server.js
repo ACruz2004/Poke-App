@@ -1,11 +1,11 @@
-import Hash from "../Data/encryptor";
-
 const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
 
 const app = express()
 const PORT = 8080
+const secureCompare = require('secure-compare')
+
 app.use(cors())
 app.use(express.json())
 
@@ -43,21 +43,24 @@ app.post('/login', (req, res) => {
     data = req.body;
     username = data['username'];
     password = data['password'];
-    const query = 'SELECT username FROM users WHERE username = ?';
-    db.query(query, [username], (err, result) => {
-        if (err) return res.status(500).send('Error checking user in database');
+    const query = 'SELECT username, password FROM users WHERE username = ?';
+    db.query(query, username, (err, result) => {
+        if (err) return res.send(err)
         else {
             if (result.length === 0) {
-                return res.status(404).send('User not found');
+                res.status(404).send('User not found');
+                return
             }
 
             const storedPassword = result[0].password;
             
-            if (Hash(password) != storedPassword) {
-                return res.status(404).send('Password is incorrect');
+            if (!secureCompare(storedPassword, password)) {
+                res.status(404).send('Password is incorrect');
+                return
+            } else {
+                res.status(200).send('User authenticated successfully');
+                return
             }
-
-            res.status(200).send('User authenticated successfully');
         }
     });
 });
