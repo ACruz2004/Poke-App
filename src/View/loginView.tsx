@@ -75,7 +75,11 @@ const LogInView: React.FC<DataProps> = ({loginState, setLoginState, error, setEr
           Log In
         </button>
         <div className="logTextMid">Don't Have An Account?</div>
-        <button className="inputButtonCreate" onClick={() => setLoginState('signup')}>
+        <button className="inputButtonCreate" onClick={() => {
+          setUsername("")
+          setPassword("")
+          setLoginState('signup')
+        }}>
           Sign Up
         </button>
       </div>
@@ -153,7 +157,12 @@ const SignUpView: React.FC<DataProps> = ({loginState, setLoginState, error, setE
           Sign Up
         </button>
         <div className="logTextMid">Already Have An Account?</div>
-        <button className="inputButtonCreate" onClick={() => setLoginState('login')}>
+        <button className="inputButtonCreate" onClick={() => {
+          setUsername("")
+          setPassword("")
+          setConfirmPassword("")
+          setLoginState('login')
+        }}>
           Log In
         </button>
       </div>
