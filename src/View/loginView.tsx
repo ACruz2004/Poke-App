@@ -38,7 +38,8 @@ const LogInView: React.FC<DataProps> = ({loginState, setLoginState, error, setEr
         });
         setUsername("");
         setPassword("");
-        console.log(response)
+        localStorage.setItem("username", username)
+        localStorage.setItem("isLogged", "true")
       } catch (error) {
         console.error("There was an error!", error);
         setError(error.response.data)
@@ -115,6 +116,7 @@ const SignUpView: React.FC<DataProps> = ({loginState, setLoginState, error, setE
         setPassword("");
       } catch (error) {
         console.error("There was an error!", error);
+        setError(error.response.data)
       }
     }
   };
