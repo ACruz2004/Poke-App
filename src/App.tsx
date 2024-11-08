@@ -66,7 +66,7 @@ const App = () => {
         throw new Error('Unknown view');
     }
   };
-
+  
   return (
     <CredentialsProvider>
       <CurrentView toggleNode={toggleNode} handleToggle={handleToggle} view={view} handleView={handleView}></CurrentView>

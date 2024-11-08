@@ -114,6 +114,7 @@ const SignUpView: React.FC<DataProps> = ({loginState, setLoginState, error, setE
         });
         setUsername("");
         setPassword("");
+        setConfirmPassword("");
       } catch (error) {
         console.error("There was an error!", error);
         setError(error.response.data)
