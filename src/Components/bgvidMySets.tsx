@@ -2,7 +2,7 @@ import videobg from "../assets/PokeballVid.mp4";
 import { Parallax } from "react-parallax";
 import { useEffect, useRef, useState } from "react";
 
-const MakeHeadVidSets = () => {
+const MakeHeadVidMySets = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [textPosition, setTextPosition] = useState("fixed"); // State to manage text position
   const [fontSize, setFontSize] = useState(6); // State to manage font size (default to 6rem, larger start size)
@@ -36,7 +36,7 @@ const MakeHeadVidSets = () => {
       <video ref={videoRef} src={videobg} autoPlay loop muted playsInline />
       <div className={`text ${textPosition}`}>
         <Parallax>
-          <h1 style={{ fontSize: `${fontSize}rem` }}>Sets</h1>
+          <h1 style={{ fontSize: `${fontSize}rem` }}>My Sets</h1>
           {/* Adjust the paragraph size proportionally */}
         </Parallax>
       </div>
@@ -44,4 +44,4 @@ const MakeHeadVidSets = () => {
   );
 };
 
-export default MakeHeadVidSets;
+export default MakeHeadVidMySets;

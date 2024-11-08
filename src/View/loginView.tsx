@@ -16,33 +16,37 @@ interface DataProps {
   loginState: string;
   setLoginState: (state: string) => void;
   error: string;
-  setError: (error: string) => void
+  setError: (error: string) => void;
 }
 
-const LogInView: React.FC<DataProps> = ({loginState, setLoginState, error, setError}) => {
-  const { username, setUsername, password, setPassword } = useContext(CredentialsContext)
+const LogInView: React.FC<DataProps> = ({
+  loginState,
+  setLoginState,
+  error,
+  setError,
+}) => {
+  const { username, setUsername, password, setPassword } =
+    useContext(CredentialsContext);
 
   const handleSubmit = async () => {
-    setError("")
+    setError("");
 
     if (!username || !password) {
-      setError("Please fill in all of the forms")
-      return
-    }
-
-    else {
+      setError("Please fill in all of the forms");
+      return;
+    } else {
       try {
         const response = await axios.post("http://localhost:8080/login", {
           username: username,
-          password: Hash(password).toString()
+          password: Hash(password).toString(),
         });
         setUsername("");
         setPassword("");
-        localStorage.setItem("username", username)
-        localStorage.setItem("isLogged", "true")
+        localStorage.setItem("username", username);
+        localStorage.setItem("isLogged", "true");
       } catch (error) {
         console.error("There was an error!", error);
-        setError(error.response.data)
+        setError(error.response.data);
       }
     }
   };
@@ -77,36 +81,41 @@ const LogInView: React.FC<DataProps> = ({loginState, setLoginState, error, setEr
           Log In
         </button>
         <div className="logTextMid">Don't Have An Account?</div>
-        <button className="inputButtonCreate" onClick={() => {
-          setUsername("")
-          setPassword("")
-          setLoginState('signup')
-        }}>
+        <button
+          className="inputButtonCreate"
+          onClick={() => {
+            setUsername("");
+            setPassword("");
+            setLoginState("signup");
+          }}
+        >
           Sign Up
         </button>
       </div>
     </div>
   );
-}
+};
 
-const SignUpView: React.FC<DataProps> = ({loginState, setLoginState, error, setError}) => {
-  const { username, setUsername, password, setPassword } = useContext(CredentialsContext)
-  const [confirmPassword, setConfirmPassword] = useState<string>("")
+const SignUpView: React.FC<DataProps> = ({
+  loginState,
+  setLoginState,
+  error,
+  setError,
+}) => {
+  const { username, setUsername, password, setPassword } =
+    useContext(CredentialsContext);
+  const [confirmPassword, setConfirmPassword] = useState<string>("");
 
   const handleSubmit = async () => {
-    setError("")
+    setError("");
 
     if (!username || !password) {
-      setError("Please fill in all of the forms")
-      return
-    }
-
-    else if (confirmPassword != password) {
-      setError("The passwords do not match")
-      return
-    }
-
-    else {
+      setError("Please fill in all of the forms");
+      return;
+    } else if (confirmPassword != password) {
+      setError("The passwords do not match");
+      return;
+    } else {
       try {
         const response = await axios.post("http://localhost:8080/signup", {
           username: username,
@@ -117,7 +126,7 @@ const SignUpView: React.FC<DataProps> = ({loginState, setLoginState, error, setE
         setConfirmPassword("");
       } catch (error) {
         console.error("There was an error!", error);
-        setError(error.response.data)
+        setError(error.response.data);
       }
     }
   };
@@ -160,27 +169,49 @@ const SignUpView: React.FC<DataProps> = ({loginState, setLoginState, error, setE
           Sign Up
         </button>
         <div className="logTextMid">Already Have An Account?</div>
-        <button className="inputButtonCreate" onClick={() => {
-          setUsername("")
-          setPassword("")
-          setConfirmPassword("")
-          setLoginState('login')
-        }}>
+        <button
+          className="inputButtonCreate"
+          onClick={() => {
+            setUsername("");
+            setPassword("");
+            setConfirmPassword("");
+            setLoginState("login");
+          }}
+        >
           Log In
         </button>
       </div>
     </div>
   );
-}
+};
 
-function ViewManager({ loginState, setLoginState, error, setError }: DataProps) {
-  switch(loginState) {
-    case 'login':
-      return <LogInView loginState={loginState} setLoginState={setLoginState} error={error} setError={setError}/>
-    case 'signup':
-      return <SignUpView loginState={loginState} setLoginState={setLoginState} error={error} setError={setError}/>
+function ViewManager({
+  loginState,
+  setLoginState,
+  error,
+  setError,
+}: DataProps) {
+  switch (loginState) {
+    case "login":
+      return (
+        <LogInView
+          loginState={loginState}
+          setLoginState={setLoginState}
+          error={error}
+          setError={setError}
+        />
+      );
+    case "signup":
+      return (
+        <SignUpView
+          loginState={loginState}
+          setLoginState={setLoginState}
+          error={error}
+          setError={setError}
+        />
+      );
     default:
-      return <div> No View Selected </div>
+      return <div> No View Selected </div>;
   }
 }
 
@@ -189,7 +220,7 @@ const LoginView: React.FC<ModeProps> = ({
   handleToggle,
   handleView,
 }) => {
-  const [loginState, setLoginState] = useState<string>('login');
+  const [loginState, setLoginState] = useState<string>("login");
   const [error, setError] = useState<string>("");
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -203,7 +234,12 @@ const LoginView: React.FC<ModeProps> = ({
           handleView={handleView}
         />
       </div>
-      <ViewManager loginState={loginState} setLoginState={setLoginState} error={error} setError={setError}/>
+      <ViewManager
+        loginState={loginState}
+        setLoginState={setLoginState}
+        error={error}
+        setError={setError}
+      />
     </div>
   );
 };
