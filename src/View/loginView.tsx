@@ -52,7 +52,7 @@ const LogInView: React.FC<DataProps> = ({
   };
 
   return (
-    <div className="inputContainer">
+    <div className="inputContainerLogIn">
       <div>
         <h1 className="logoTextLog">PokéTrove</h1>
         {error && <span className="errorText">{error}</span>}
@@ -124,6 +124,7 @@ const SignUpView: React.FC<DataProps> = ({
         setUsername("");
         setPassword("");
         setConfirmPassword("");
+        setLoginState("login");
       } catch (error) {
         console.error("There was an error!", error);
         setError(error.response.data);
@@ -132,7 +133,7 @@ const SignUpView: React.FC<DataProps> = ({
   };
 
   return (
-    <div className="inputContainer">
+    <div className="inputContainerSignUp">
       <h1 className="logoTextLog">PokéTrove</h1>
       {error && <span className="errorText">{error}</span>}
       <div className="inputGroup">
