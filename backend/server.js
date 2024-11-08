@@ -5,6 +5,7 @@ const mysql = require('mysql2');
 const cors = require('cors');
 
 const app = express()
+const PORT = 8080
 const secureCompare = require('secure-compare')
 
 app.use(cors())
@@ -70,3 +71,7 @@ app.post('/login', (req, res) => {
         }
     });
 });
+
+app.listen(PORT, () => {
+    console.log("listening");
+})
