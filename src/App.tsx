@@ -11,9 +11,9 @@ interface CredentialsType {
 
 export const CredentialsContext = createContext<CredentialsType>({
   username: "",
-  setUsername: () => { },
+  setUsername: () => {},
   password: "",
-  setPassword: () => { }
+  setPassword: () => {},
 });
 
 interface CredentialsProps {
@@ -24,52 +24,56 @@ export const CredentialsProvider = ({ children }: CredentialsProps) => {
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
-  const updateUsername = (username: string) => setUsername(username)
-  const updatePassword = (password: string) => setPassword(password)
+  const updateUsername = (username: string) => setUsername(username);
+  const updatePassword = (password: string) => setPassword(password);
 
   return (
-    <CredentialsContext.Provider value={{
-      username,
-      setUsername: updateUsername,
-      password,
-      setPassword: updatePassword
-    }}>
+    <CredentialsContext.Provider
+      value={{
+        username,
+        setUsername: updateUsername,
+        password,
+        setPassword: updatePassword,
+      }}
+    >
       {children}
     </CredentialsContext.Provider>
   );
-}
+};
 
 const App = () => {
   const [toggleNode, setToggleNode] = useState(1);
   const handleToggle = () => {
     setToggleNode((prev) => (prev === 1 ? 2 : 1));
   };
-  const [view, setView] = useState<View>('home');
+  const [view, setView] = useState<View>("home");
   const handleView = (view: View) => {
     switch (view) {
-      case 'home':
-        setView('home');
+      case "home":
+        setView("home");
         break;
-      case 'sets':
-        setView('sets');
+      case "sets":
+        setView("sets");
         break;
-      case 'my sets':
-        setView('my sets');
+      case "my sets":
+        setView("my sets");
         break;
-      case 'about':
-        setView('about');
-        break;
-      case 'login':
-        setView('login');
+      case "login":
+        setView("login");
         break;
       default:
-        throw new Error('Unknown view');
+        throw new Error("Unknown view");
     }
   };
-  
+
   return (
     <CredentialsProvider>
-      <CurrentView toggleNode={toggleNode} handleToggle={handleToggle} view={view} handleView={handleView}></CurrentView>
+      <CurrentView
+        toggleNode={toggleNode}
+        handleToggle={handleToggle}
+        view={view}
+        handleView={handleView}
+      ></CurrentView>
     </CredentialsProvider>
   );
 };

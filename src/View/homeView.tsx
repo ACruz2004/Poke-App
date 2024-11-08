@@ -7,6 +7,7 @@ import ImageStellar from "../Components/ImageStellar";
 import ImageTwilight from "../Components/ImageTwilight";
 import React from "react";
 import { View } from "../Components/currentView";
+import ImageSparking from "../Components/ImageSparking";
 
 interface ModeProps {
   toggleNode: number;
@@ -30,6 +31,12 @@ const HomeView: React.FC<ModeProps> = ({
       </div>
       <div className="bgVid">
         <MakeHeadVid />
+      </div>
+      <div className="bodyCont">
+        <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
+      </div>
+      <div>
+        <ImageSparking />
       </div>
       <div className="bodyCont">
         <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />

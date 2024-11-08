@@ -46,12 +46,6 @@ const MakeHead: React.FC<MakeHeadProps & ViewProps> = ({
         </li>
         <li
           className={toggleNode == 1 ? "light" : "dark "}
-          onClick={() => handleView("about")}
-        >
-          About
-        </li>
-        <li
-          className={toggleNode == 1 ? "light" : "dark "}
           onClick={() => handleView("login")}
         >
           Log In
