@@ -1,5 +1,6 @@
 import React from "react";
 import CardItem from "./cardItem";
+import CardItemNew from "./cardItemNew";
 import SCImage from "../assets/Elites/SCETB.jpg";
 import TMImage from "../assets/Elites/TMETB.jpg";
 import SFImage from "../assets/Elites/SFETB.jpg";
@@ -12,7 +13,7 @@ import OFOImage from "../assets/Elites/151ETB.jpg";
 const Card = () => {
   return (
     <div className="card">
-      <CardItem
+      <CardItemNew
         image={SSImage}
         name="Surging Sparks"
         collected="0/250 (Progress Bar)"
