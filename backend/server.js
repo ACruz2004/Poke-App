@@ -62,7 +62,7 @@ app.post('/login', (req, res) => {
             const storedPassword = result[0].password;
 
             if (!secureCompare(storedPassword, password)) {
-                res.status(404).send('Incorrect credentials');
+                res.status(404).send('Incorrect Username/Password');
                 return
             } else {
                 res.status(200).send('User authenticated successfully');
