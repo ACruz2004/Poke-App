@@ -55,7 +55,7 @@ app.post('/login', (req, res) => {
         if (err) return res.send(err)
         else {
             if (result.length === 0) {
-                res.status(404).send('Incorrect credentials');
+                res.status(404).send('Incorrect Username/Password');
                 return
             }
 
