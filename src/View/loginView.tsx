@@ -32,7 +32,7 @@ const LogInView: React.FC<DataProps> = ({
     setError("");
 
     if (!username || !password) {
-      setError("Please fill in all of the forms");
+      setError("Missing Username or Password!");
       return;
     } else {
       try {
@@ -45,7 +45,7 @@ const LogInView: React.FC<DataProps> = ({
         localStorage.setItem("username", username);
         localStorage.setItem("isLogged", "true");
         window.location.reload();
-        console.log(localStorage)
+        console.log(localStorage);
       } catch (error) {
         console.error("There was an error!", error);
         setError(error.response.data);
