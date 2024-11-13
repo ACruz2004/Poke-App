@@ -7,6 +7,7 @@ import Card from "../Components/card";
 import SCARVIOLOGO from "../assets/Logos/S&VLogo.png";
 import "../Style/cards.css";
 import { View } from "../Components/currentView";
+import CardScarViol from "../Components/card";
 
 interface ModeProps {
   toggleNode: number;
@@ -38,7 +39,7 @@ const SetsView: React.FC<ModeProps> = ({
         <img src={SCARVIOLOGO} alt="" />
       </div>
       <div className="Sets">
-        <Card />
+        <CardScarViol toggleNode={toggleNode} handleToggle={handleToggle} />
       </div>
       <div className="bodyCont">
         <MakeGround toggleNode={toggleNode} handleToggle={handleToggle} />
