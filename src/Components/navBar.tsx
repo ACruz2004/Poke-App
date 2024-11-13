@@ -1,10 +1,7 @@
 // Header
 import logo from "../assets/pokeBallNew.png";
-import makeNight from "../assets/day.png";
-import makeDay from "../assets/night.png";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { View } from "./currentView";
-import { useState, useEffect } from "react";
 
 interface MakeHeadProps {
   toggleNode: number;
@@ -22,8 +19,10 @@ interface LoggingInfoProps {
   setUsername: () => void;
 }
 
-const UserIcon = () => {
-  const [isLogged, setIsLogged] = useState(localStorage.getItem("isLogged") === "true");
+const UserIcon: React.FC<{ toggleNode: number }> = ({ toggleNode }) => {
+  const [isLogged, setIsLogged] = useState(
+    localStorage.getItem("isLogged") === "true"
+  );
   const [username, setUsername] = useState(localStorage.getItem("username"));
 
   const handleLogout = () => {
@@ -33,7 +32,7 @@ const UserIcon = () => {
     setIsLogged(false);
     setUsername(null);
 
-    window.location.reload()
+    window.location.reload();
   };
 
   useEffect(() => {
@@ -49,7 +48,10 @@ const UserIcon = () => {
   return (
     <>
       {isLogged && username && (
-        <span className="userIcon" onClick={handleLogout}>
+        <span
+          className={toggleNode === 1 ? "userIcon" : "userIconDark"}
+          onClick={handleLogout}
+        >
           {username}
         </span>
       )}
@@ -63,44 +65,38 @@ const MakeHead: React.FC<MakeHeadProps & ViewProps> = ({
   handleView,
 }) => {
   return (
-    <div className={toggleNode == 1 ? "nav" : "navDark"}>
-      <img src={logo} alt="" className="logo" />
-      <h1 className={toggleNode == 1 ? "logoText" : "logoTextDark"}>
+    <div className={toggleNode === 1 ? "nav" : "navDark"}>
+      <img onClick={handleToggle} src={logo} alt="Logo" className="logo" />
+      <h1 className={toggleNode === 1 ? "logoText" : "logoTextDark"}>
         PokéTrove
       </h1>
       <ul>
         <li
-          className={toggleNode == 1 ? "light" : "dark "}
+          className={toggleNode === 1 ? "light" : "dark"}
           onClick={() => handleView("home")}
         >
           Home
         </li>
         <li
-          className={toggleNode == 1 ? "light" : "dark "}
+          className={toggleNode === 1 ? "light" : "dark"}
           onClick={() => handleView("sets")}
         >
           Sets
         </li>
         <li
-          className={toggleNode == 1 ? "light" : "dark "}
+          className={toggleNode === 1 ? "light" : "dark"}
           onClick={() => handleView("my sets")}
         >
           My Sets
         </li>
         <li
-          className={toggleNode == 1 ? "light" : "dark "}
+          className={toggleNode === 1 ? "light" : "dark"}
           onClick={() => handleView("login")}
         >
           Log In
         </li>
       </ul>
-      <UserIcon/>
-      <img
-        onClick={handleToggle}
-        src={toggleNode == 1 ? makeDay : makeNight}
-        alt="toggle icon"
-        className="toggleIcon"
-      />
+      <UserIcon toggleNode={toggleNode} />
     </div>
   );
 };

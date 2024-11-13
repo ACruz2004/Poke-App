@@ -23,7 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #f6f8f9;
+    background: #f4f4f4;
     box-shadow: 0 0 2px #222, 0 0 5px #222;
     transition: 0.5s ease-in-out;
 
@@ -52,15 +52,6 @@
 .logo:hover {
     z-index: 3;
     transform: rotate(720deg);
-}
-
-.userIcon {
-    z-index: 3;
-    width: 60px;
-    cursor: pointer;
-    margin-left: 25px;
-    transition: all 0.5s ease-in-out;
-    font-size: 25px;
 }
 
 .toggleIcon {
@@ -124,4 +115,27 @@ ul li {
 ul li:hover {
     z-index: 3;
     transform: scale(1.25);
+}
+
+.userIcon {
+    z-index: 3;
+    width: 60px;
+    cursor: pointer;
+    margin-left: 25px;
+    transition: all 0.5s ease-in-out;
+    font-size: 25px;
+    font-family: PokeFont;
+    margin-right: 80px;
+}
+
+.userIconDark {
+    z-index: 3;
+    width: 60px;
+    cursor: pointer;
+    margin-left: 25px;
+    transition: all 0.5s ease-in-out;
+    font-size: 25px;
+    font-family: PokeFont;
+    margin-right: 80px;
+    color: #f4f4f4;
 }

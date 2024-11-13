@@ -4,6 +4,7 @@ import MakeHeadVidSets from "../Components/bgvidSets";
 import MakeGround from "../Components/ground";
 import MakeBody from "../Components/body";
 import Card from "../Components/card";
+import SCARVIOLOGO from "../assets/Logos/S&VLogo.png";
 import "../Style/cards.css";
 import { View } from "../Components/currentView";
 
@@ -32,6 +33,9 @@ const SetsView: React.FC<ModeProps> = ({
       </div>
       <div className="bodyCont">
         <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
+      </div>
+      <div className={toggleNode == 1 ? "LogoTab" : "LogoTabDark"}>
+        <img src={SCARVIOLOGO} alt="" />
       </div>
       <div className="Sets">
         <Card />
