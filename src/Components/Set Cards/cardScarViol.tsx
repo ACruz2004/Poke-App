@@ -1,20 +1,20 @@
 import React, { useState } from "react";
-import CardItem from "./cardItem";
-import CardItemNew from "./cardItemNew";
-import SCImage from "../assets/Elites/SCETB.jpg";
-import TMImage from "../assets/Elites/TMETB.jpg";
-import SFImage from "../assets/Elites/SFETB.jpg";
-import TFImage from "../assets/Elites/TFETB.jpg";
-import TFDImage from "../assets/Elites/TFETBD.jpg";
-import SSImage from "../assets/Elites/SSETB.jpeg";
-import PFImage from "../assets/Elites/PFETB.jpg";
-import PRImage from "../assets/Elites/PRETB2.jpeg";
-import PRDImage from "../assets/Elites/PRETBD.jpg";
-import OFOImage from "../assets/Elites/151ETB.jpg";
-import OFImage from "../assets/Elites/OFETB.jpg";
-import PEImage from "../assets/Elites/PEETB.jpg";
-import SVImage from "../assets/Elites/S&VETB.jpg";
-import SVDImage from "../assets/Elites/S&VETBD.jpg";
+import CardItem from "../cardItem";
+import CardItemNew from "../cardItemNew";
+import SCImage from "../../assets/Elites/SCETB.jpg";
+import TMImage from "../../assets/Elites/TMETB.jpg";
+import SFImage from "../../assets/Elites/SFETB.jpg";
+import TFImage from "../../assets/Elites/TFETB.jpg";
+import TFDImage from "../../assets/Elites/TFETBD.jpg";
+import SSImage from "../../assets/Elites/SSETB.jpeg";
+import PFImage from "../../assets/Elites/PFETB.jpg";
+import PRImage from "../../assets/Elites/PRETB2.jpeg";
+import PRDImage from "../../assets/Elites/PRETBD.jpg";
+import OFOImage from "../../assets/Elites/151ETB.jpg";
+import OFImage from "../../assets/Elites/OFETB.jpg";
+import PEImage from "../../assets/Elites/PEETB.jpg";
+import SVImage from "../../assets/Elites/S&VETB.jpg";
+import SVDImage from "../../assets/Elites/S&VETBD.jpg";
 
 interface CardProps {
   toggleNode: number;
