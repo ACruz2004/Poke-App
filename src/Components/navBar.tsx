@@ -15,13 +15,6 @@ interface ViewProps {
   handleView: (action: View) => void;
 }
 
-interface LoggingInfoProps {
-  isLogged: string;
-  setIsLogged: () => void;
-  username: string;
-  setUsername: () => void;
-}
-
 const UserIcon = () => {
   const [isLogged, setIsLogged] = useState(localStorage.getItem("isLogged") === "true");
   const [username, setUsername] = useState(localStorage.getItem("username"));
@@ -62,6 +55,7 @@ const MakeHead: React.FC<MakeHeadProps & ViewProps> = ({
   handleToggle,
   handleView,
 }) => {
+  const [isLogged, setIsLogged] = useState(localStorage.getItem("isLogged") === "true");
   return (
     <div className={toggleNode == 1 ? "nav" : "navDark"}>
       <img src={logo} alt="" className="logo" />
@@ -81,12 +75,14 @@ const MakeHead: React.FC<MakeHeadProps & ViewProps> = ({
         >
           Sets
         </li>
+        {isLogged && (
         <li
-          className={toggleNode == 1 ? "light" : "dark "}
-          onClick={() => handleView("my sets")}
+          className={toggleNode === 1 ? 'light' : 'dark'}
+          onClick={() => handleView('my sets')}
         >
           My Sets
         </li>
+      )}
         <li
           className={toggleNode == 1 ? "light" : "dark "}
           onClick={() => handleView("login")}
