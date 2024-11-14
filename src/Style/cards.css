@@ -101,3 +101,75 @@
     padding-left: 30px;
     width: 100px;
 }
+
+.LogoTab {
+    background-color: #f4f4f4;
+    box-shadow: 1px 5px 5px #000000;
+    height: 75px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 300px;
+    transition: 0.5s ease-in-out;
+}
+
+.LogoTab img {
+    margin-left: 50px;
+    margin-top: -21px;
+    width: 200px;
+    height: auto;
+}
+
+.LogoTabDark {
+    background-color: #222;
+    color: #f6f8f9;
+    box-shadow: 1px 5px 5px #f6f8f9;
+    height: 75px;
+    z-index: 3;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 300px;
+    transition: 0.5s ease-in-out;
+}
+
+.LogoTabDark img {
+    margin-left: 50px;
+    margin-top: -21px;
+    width: 200px;
+    height: auto;
+}
+
+.LogoTab2 {
+    background-color: #f4f4f4;
+    box-shadow: 1px 5px 5px #000000;
+    height: 75px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 300px;
+    transition: 0.5s ease-in-out;
+}
+
+.LogoTab2 img {
+    margin-left: 50px;
+    margin-top: 21px;
+    width: 200px;
+    height: auto;
+}
+
+.LogoTabDark2 {
+    background-color: #222;
+    color: #f6f8f9;
+    box-shadow: 1px 5px 5px #f6f8f9;
+    height: 75px;
+    z-index: 3;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 300px;
+    transition: 0.5s ease-in-out;
+}
+
+.LogoTabDark2 img {
+    margin-left: 50px;
+    margin-top: 21px;
+    width: 200px;
+    height: auto;
+}

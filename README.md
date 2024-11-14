@@ -20,6 +20,10 @@ DAY? + 3?
 Added more CSS Elements to Login page and LOGO CHANGE "W"
 <img width="1470" alt="Screenshot 2024-11-01 at 10 41 13 AM" src="https://github.com/user-attachments/assets/7b8e0591-bab5-434f-a8bb-c5f8d1cc3958">
 
+Day 17: Added Parallax to Sets, Going to Toss Different Things Around (ALSO ADDED DARK AND LIGHT MODE ELEMENTS TO BG)
+<img width="1470" alt="Screenshot 2024-11-13 at 7 27 32 PM" src="https://github.com/user-attachments/assets/fbce9327-a969-4f2c-8f0d-0a45ad922a11">
+<img width="1470" alt="Screenshot 2024-11-13 at 7 27 36 PM" src="https://github.com/user-attachments/assets/4d867a32-23a8-4af1-b5db-a7e181d59a44">
+
 
 # React + TypeScript + Vite
 
