@@ -1,4 +1,5 @@
 import React from "react";
+import { Parallax } from "react-parallax";
 import MakeHead from "../Components/navBar";
 import MakeHeadVidSets from "../Components/bgvidSets";
 import MakeGround from "../Components/ground";
@@ -9,6 +10,8 @@ import "../Style/cards.css";
 import { View } from "../Components/currentView";
 import CardScarViol from "../Components/Set Cards/cardScarViol";
 import CardSwordShield from "../Components/Set Cards/cardSwordShield";
+import SVBG from "../assets/Background Images/S&VBG2.jpg";
+import SVBGD from "../assets/Background Images/S&VBG2D.jpg";
 
 interface ModeProps {
   toggleNode: number;
@@ -36,12 +39,19 @@ const SetsView: React.FC<ModeProps> = ({
       <div className="bodyCont">
         <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
       </div>
-      <div className={toggleNode == 1 ? "LogoTab" : "LogoTabDark"}>
-        <img src={SCARVIOLOGO} alt="" />
-      </div>
-      <div className="Sets">
-        <CardScarViol toggleNode={toggleNode} handleToggle={handleToggle} />
-      </div>
+      <Parallax
+        className="sets"
+        bgImage={toggleNode === 1 ? SVBG : SVBGD}
+        bgImageStyle={{ height: "100%", width: "125%" }}
+        strength={500}
+      >
+        <div className={toggleNode == 1 ? "LogoTab" : "LogoTabDark"}>
+          <img src={SCARVIOLOGO} alt="" />
+        </div>
+        <div className="Sets">
+          <CardScarViol toggleNode={toggleNode} handleToggle={handleToggle} />
+        </div>
+      </Parallax>
       <div className="bodyCont">
         <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
       </div>
