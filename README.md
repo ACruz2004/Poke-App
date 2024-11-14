@@ -1,4 +1,4 @@
-<img width="1470" alt="Screenshot 2024-11-13 at 7 27 32 PM" src="https://github.com/user-attachments/assets/8d645755-a338-40c5-aa6b-5e3367e0e496">Day 1: Starting out 
+Day 1: Starting out 
 <img width="1470" alt="Screenshot 2024-10-08 at 1 12 10 AM" src="https://github.com/user-attachments/assets/56fe729c-5f56-4cd4-b764-a501a3a3e8a1">
 
 Day 2: Added clickable items and CSS
