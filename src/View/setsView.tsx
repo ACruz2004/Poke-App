@@ -60,7 +60,7 @@ const SetsView: React.FC<ModeProps> = ({
       <Parallax
         className="sets"
         bgImage={toggleNode === 1 ? SSBG : SSBGD}
-        bgImageStyle={{ height: "100%", width: "125%" }}
+        bgImageStyle={{ height: "125%", width: "150%" }}
         strength={500}
       >
         <div className={toggleNode == 1 ? "LogoTab2" : "LogoTabDark2"}>
