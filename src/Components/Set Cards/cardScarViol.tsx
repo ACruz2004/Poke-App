@@ -35,15 +35,17 @@ const CardScarViol: React.FC<CardProps> = ({ toggleNode }) => {
 
   return (
     <div className="card">
-      {sets.map((set) => (
-        <CardItem
-          key={set.setId}
-          image={`/src/assets/Elites/${set.setPath}`}
-          name={set.setName}
-          collected = ""
-          id={set.setId}
-        />
-      ))}
+        {sets
+            .filter((set) => set.setGroup === "Scarlet & Violet")
+            .map((set) => (
+            <CardItem
+                key={set.setId}
+                image={`/src/assets/Elites/${set.setPath}`}
+                name={set.setName}
+                collected= {set.progress}
+                id={set.setId}
+            />
+        ))}
     </div>
     // <div className="card">
     //   <CardItemNew

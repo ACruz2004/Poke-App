@@ -30,7 +30,9 @@ const CardScarViolMySets: React.FC<CardProps> = () => {
 
     return (
         <div className="card">
-            {sets.map((set) => (
+            {sets
+                .filter((set) => set.setGroup === "Scarlet & Violet")
+                .map((set) => (
                 <CardItem
                     key={set.setId}
                     image={`/src/assets/Elites/${set.setPath}`}
