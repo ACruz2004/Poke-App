@@ -12,6 +12,8 @@ import CardScarViol from "../Components/Set Cards/cardScarViol";
 import CardSwordShield from "../Components/Set Cards/cardSwordShield";
 import SVBG from "../assets/Background Images/S&VBG2.jpg";
 import SVBGD from "../assets/Background Images/S&VBG2D.jpg";
+import SSBG from "../assets/Background Images/S&SBG.jpeg";
+import SSBGD from "../assets/Background Images/S&SBGD.jpeg";
 
 interface ModeProps {
   toggleNode: number;
@@ -55,12 +57,22 @@ const SetsView: React.FC<ModeProps> = ({
       <div className="bodyCont">
         <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
       </div>
-      <div className={toggleNode == 1 ? "LogoTab2" : "LogoTabDark2"}>
-        <img src={SWORDSHIELDLOGO} alt="" />
-      </div>
-      <div className="Sets">
-        <CardSwordShield toggleNode={toggleNode} handleToggle={handleToggle} />
-      </div>
+      <Parallax
+        className="sets"
+        bgImage={toggleNode === 1 ? SSBG : SSBGD}
+        bgImageStyle={{ height: "125%", width: "150%" }}
+        strength={500}
+      >
+        <div className={toggleNode == 1 ? "LogoTab2" : "LogoTabDark2"}>
+          <img src={SWORDSHIELDLOGO} alt="" />
+        </div>
+        <div className="Sets">
+          <CardSwordShield
+            toggleNode={toggleNode}
+            handleToggle={handleToggle}
+          />
+        </div>
+      </Parallax>
       <div className="bodyCont">
         <MakeGround toggleNode={toggleNode} handleToggle={handleToggle} />
       </div>
