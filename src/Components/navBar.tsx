@@ -1,5 +1,6 @@
 // Header
 import logo from "../assets/pokeBallNew.png";
+import logoDark from "../assets/PokeBallNewD.png";
 import React, { useState, useEffect } from "react";
 import { View } from "./currentView";
 
@@ -25,7 +26,7 @@ const UserIcon: React.FC<{ toggleNode: number }> = ({ toggleNode }) => {
     setIsLogged(false);
     setUsername(null);
 
-    window.location.reload()
+    window.location.reload();
   };
 
   useEffect(() => {
@@ -57,10 +58,17 @@ const MakeHead: React.FC<MakeHeadProps & ViewProps> = ({
   handleToggle,
   handleView,
 }) => {
-  const [isLogged, setIsLogged] = useState(localStorage.getItem("isLogged") === "true");
+  const [isLogged, setIsLogged] = useState(
+    localStorage.getItem("isLogged") === "true"
+  );
   return (
     <div className={toggleNode === 1 ? "nav" : "navDark"}>
-      <img onClick={handleToggle} src={logo} alt="Logo" className="logo" />
+      <img
+        onClick={handleToggle}
+        src={toggleNode === 1 ? logo : logoDark}
+        alt="Logo"
+        className="logo"
+      />
       <h1 className={toggleNode === 1 ? "logoText" : "logoTextDark"}>
         PokéTrove
       </h1>
@@ -78,13 +86,13 @@ const MakeHead: React.FC<MakeHeadProps & ViewProps> = ({
           Sets
         </li>
         {isLogged && (
-        <li
-          className={toggleNode === 1 ? "light" : "dark"}
-          onClick={() => handleView("my sets")}
-        >
-          My Sets
-        </li>
-      )}
+          <li
+            className={toggleNode === 1 ? "light" : "dark"}
+            onClick={() => handleView("my sets")}
+          >
+            My Sets
+          </li>
+        )}
         <li
           className={toggleNode === 1 ? "light" : "dark"}
           onClick={() => handleView("login")}
