@@ -57,6 +57,9 @@ app.post('/login', (req, res) => {
             if (result.length === 0) {
                 res.status(404).send('Incorrect Username/Password');
                 return
+            } else if (result.length > 1) {
+                res.status(404).send('User already exists.');
+                return
             }
 
             const storedPassword = result[0].password;
@@ -69,6 +72,46 @@ app.post('/login', (req, res) => {
                 return
             }
         }
+    });
+});
+
+app.get('/get_all_sets', (req, res) => {
+    const query = "SELECT * FROM sets";
+    db.query(query, (err, result) => {
+        if (err) res.send(err);
+        else res.send(result);
+    });
+});
+
+app.post('/add_set', (req, res) => {
+    const data = req.body;
+    const username = data.username;
+    const setId = data.setId;
+
+    const query1 = "SELECT userId FROM user_info_cool WHERE username = ?";
+    db.query(query1, username, (err1, result1) => {
+        if (err1) {
+            res.status(500).send(err1);
+            return;
+        }
+        if (result1.length === 0) {
+            res.status(404).send('User not found');
+            return;
+        }
+
+        const userId = result1[0].userId;
+
+        const query2 = "INSERT INTO user_sets (userId, setId) VALUES (?, ?)";
+        db.query(query2, [userId, setId], (err2, result2) => {
+            if (err2) {
+                res.status(500).send(err2);
+                return;
+            }
+            if (result2.affectedRows === 0) {
+                res.status(200).send('Set added');
+                return;
+            }
+        });
     });
 });
 

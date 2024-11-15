@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CardItem from "../cardItem";
 import CardItemNew from "../cardItemNew";
 import SCImage from "../../assets/Elites/SCETB.jpg";
@@ -22,60 +22,82 @@ interface CardProps {
 }
 
 const CardScarViol: React.FC<CardProps> = ({ toggleNode }) => {
+
+  const [sets, setSets] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8080/get_all_sets")
+      .then((response) => response.json())
+      .then((data) => setSets(data))
+      .catch((error) => console.error("Error fetching sets:", error));
+  }, []);
+
+
   return (
     <div className="card">
-      <CardItemNew
-        image={SSImage}
-        name="Surging Sparks"
-        collected="0/250 (Progress Bar)"
-      />
-      <CardItem
-        image={SCImage}
-        name="Stellar Crown"
-        collected="0/175 (Progress Bar)"
-      />
-      <CardItem
-        image={SFImage}
-        name="Shrouded Fable"
-        collected="0/99 (Progress Bar)"
-      />
-      <CardItem
-        image={TMImage}
-        name="Twilight Masquerade"
-        collected="0/226 (Progress Bar)"
-      />
-      <CardItem
-        image={toggleNode === 1 ? TFImage : TFDImage}
-        name="Temporal Forces"
-        collected="0/218 (Progress Bar)"
-      />
-      <CardItem
-        image={PFImage}
-        name="Paldean Fates"
-        collected="0/245 (Progress Bar)"
-      />
-      <CardItem
-        image={toggleNode === 1 ? PRImage : PRDImage}
-        name="Paradox Rift"
-        collected="0/266 (Progress Bar)"
-      />
-      <CardItem image={OFOImage} name="151" collected="0/210 (Progress Bar)" />
-      <CardItem
-        image={OFImage}
-        name="Obsidian Flames"
-        collected="0/230 (Progress Bar)"
-      />
-      <CardItem
-        image={PEImage}
-        name="Paldea Evolved"
-        collected="0/279 (Progress Bar)"
-      />
-      <CardItem
-        image={toggleNode === 1 ? SVImage : SVDImage}
-        name="Scarlet & Violet"
-        collected="0/258 (Progress Bar)"
-      />
+      {sets.map((set) => (
+        <CardItem
+          key={set.setId}
+          image={`/src/assets/Elites/${set.setPath}`}
+          name={set.setName}
+          collected = ""
+          id={set.setId}
+        />
+      ))}
     </div>
+    // <div className="card">
+    //   <CardItemNew
+    //     image={SSImage}
+    //     name="Surging Sparks"
+    //     collected="0/250 (Progress Bar)"
+    //   />
+    //   <CardItem
+    //     image={SCImage}
+    //     name="Stellar Crown"
+    //     collected="0/175 (Progress Bar)"
+    //   />
+    //   <CardItem
+    //     image={SFImage}
+    //     name="Shrouded Fable"
+    //     collected="0/99 (Progress Bar)"
+    //   />
+    //   <CardItem
+    //     image={TMImage}
+    //     name="Twilight Masquerade"
+    //     collected="0/226 (Progress Bar)"
+    //   />
+    //   <CardItem
+    //     image={toggleNode === 1 ? TFImage : TFDImage}
+    //     name="Temporal Forces"
+    //     collected="0/218 (Progress Bar)"
+    //   />
+    //   <CardItem
+    //     image={PFImage}
+    //     name="Paldean Fates"
+    //     collected="0/245 (Progress Bar)"
+    //   />
+    //   <CardItem
+    //     image={toggleNode === 1 ? PRImage : PRDImage}
+    //     name="Paradox Rift"
+    //     collected="0/266 (Progress Bar)"
+    //   />
+    //   <CardItem image={OFOImage} name="151" collected="0/210 (Progress Bar)" />
+    //   <CardItem
+    //     image={OFImage}
+    //     name="Obsidian Flames"
+    //     collected="0/230 (Progress Bar)"
+    //   />
+    //   <CardItem
+    //     image={PEImage}
+    //     name="Paldea Evolved"
+    //     collected="0/279 (Progress Bar)"
+    //   />
+    //   <CardItem
+    //     image={toggleNode === 1 ? SVImage : SVDImage}
+    //     name="Scarlet & Violet"
+    //     collected="0/258 (Progress Bar)"
+    //   />
+    // </div>
   );
 };
 

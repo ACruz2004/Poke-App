@@ -48,7 +48,7 @@ const LogInView: React.FC<DataProps> = ({
         console.log(localStorage);
       } catch (error) {
         console.error("There was an error!", error);
-        setError(error.response.data);
+        setError(error.response?.data);
       }
     }
   };
