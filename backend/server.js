@@ -115,6 +115,26 @@ app.post('/add_set', (req, res) => {
     });
 });
 
+app.get('/get_all_mySets', (req, res) => {
+    const query = `
+        SELECT A.*, B.progress
+        FROM sets AS A
+        JOIN user_sets AS B ON A.setId = B.setId
+        JOIN user_info_cool AS C ON B.userId = C.userId
+        WHERE C.username = ?;
+    `;
+
+    const username = req.query.username;
+
+    db.query(query, username, (err, result) => {
+        if (err) {
+            res.status(500).send(err);
+            return;
+        }
+        res.send(result)
+    });
+});
+
 app.listen(PORT, () => {
     console.log("listening");
 })

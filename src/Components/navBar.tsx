@@ -93,12 +93,13 @@ const MakeHead: React.FC<MakeHeadProps & ViewProps> = ({
             My Sets
           </li>
         )}
-        <li
+        {!isLogged && (<li
           className={toggleNode === 1 ? "light" : "dark"}
           onClick={() => handleView("login")}
         >
           Log In
         </li>
+        )}
       </ul>
       <UserIcon toggleNode={toggleNode} />
     </div>
