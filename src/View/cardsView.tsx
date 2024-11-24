@@ -9,7 +9,7 @@ import SWORDSHIELDLOGO from "../assets/Logos/S&SLogo.png";
 import "../Style/cards.css";
 import { View } from "../Components/currentView";
 import CardScarViol from "../Components/Sets & Cards/cardScarViol";
-import CardSwordShield from "../Components/Sets & Cards/cardSwordShield";
+import CardSwordShield from "../Components/Sets & Cards/setSwordShield";
 import SVBG from "../assets/Background Images/S&VBG2.jpg";
 import SVBGD from "../assets/Background Images/S&VBG2D.jpg";
 import SSBG from "../assets/Background Images/S&SBG.jpeg";

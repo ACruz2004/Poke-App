@@ -86,14 +86,34 @@
     font-size: 18px;
     max-width: 200px;
 }
-ul {
+
+.nav ul {
     z-index: 3;
     flex: 1;
     list-style: none;
-    padding-left: 225px;
+    text-align: center;
+    margin-right: 190px;
 }
 
-ul li {
+.navDark ul {
+    z-index: 3;
+    flex: 1;
+    list-style: none;
+    text-align: center;
+    margin-right: 190px;
+}
+
+.nav ul li {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index: 3;
+    display: inline-block;
+    margin: 10px 30px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.navDark ul li {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     z-index: 3;
     display: inline-block;
