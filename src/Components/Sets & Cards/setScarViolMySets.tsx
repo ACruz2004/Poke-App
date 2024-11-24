@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
-import CardItem from "../cardItem";
+import SetItemMySet from "../setItemMySet";
+import { View } from "../currentView";
 
 interface CardProps {
     toggleNode: number;
     handleToggle: () => void;
+    handleView: (action: View) => void;
 }
 
-const CardScarViolMySets: React.FC<CardProps> = () => {
+const CardScarViolMySets: React.FC<CardProps> = ({handleView}) => {
 
     const [sets, setSets] = useState([]);
 
@@ -32,13 +34,15 @@ const CardScarViolMySets: React.FC<CardProps> = () => {
         <div className="card">
             {sets
                 .filter((set) => set.setGroup === "Scarlet & Violet")
+                .sort((a, b) => a.setId - b.setId)
                 .map((set) => (
-                <CardItem
+                <SetItemMySet
                     key={set.setId}
                     image={`/src/assets/Elites/${set.setPath}`}
                     name={set.setName}
                     collected= {set.progress}
                     id={set.setId}
+                    handleView={handleView}
                 />
             ))}
         </div>

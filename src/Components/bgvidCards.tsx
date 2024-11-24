@@ -36,7 +36,7 @@ const MakeHeadVidSets = () => {
       <video ref={videoRef} src={videobg} autoPlay loop muted playsInline />
       <div className={`text ${textPosition}`}>
         <Parallax>
-          <h1 style={{ fontSize: `${fontSize}rem` }}>Sets</h1>
+          <h1 style={{ fontSize: `${fontSize}rem` }}>Cards</h1>
           {/* Adjust the paragraph size proportionally */}
         </Parallax>
       </div>

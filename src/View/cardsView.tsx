@@ -1,15 +1,15 @@
 import React from "react";
 import { Parallax } from "react-parallax";
 import MakeHead from "../Components/navBar";
-import MakeHeadVidSets from "../Components/bgvidSets";
+import MakeHeadVidCards from "../Components/bgvidCards";
 import MakeGround from "../Components/ground";
 import MakeBody from "../Components/body";
 import SCARVIOLOGO from "../assets/Logos/S&VLogo.png";
 import SWORDSHIELDLOGO from "../assets/Logos/S&SLogo.png";
 import "../Style/cards.css";
 import { View } from "../Components/currentView";
-import SetScarViol from "../Components/Sets & Cards/setScarViol";
-import SetSwordShield from "../Components/Sets & Cards/setSwordShield";
+import CardScarViol from "../Components/Sets & Cards/cardScarViol";
+import CardSwordShield from "../Components/Sets & Cards/cardSwordShield";
 import SVBG from "../assets/Background Images/S&VBG2.jpg";
 import SVBGD from "../assets/Background Images/S&VBG2D.jpg";
 import SSBG from "../assets/Background Images/S&SBG.jpeg";
@@ -21,7 +21,7 @@ interface ModeProps {
   handleView: (id: View) => void;
 }
 
-const SetsView: React.FC<ModeProps> = ({
+const CardsView: React.FC<ModeProps> = ({
   toggleNode,
   handleToggle,
   handleView,
@@ -35,12 +35,6 @@ const SetsView: React.FC<ModeProps> = ({
           handleView={handleView}
         />
       </div>
-      <div className="bgVid">
-        <MakeHeadVidSets />
-      </div>
-      <div className="bodyCont">
-        <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
-      </div>
       <Parallax
         className="sets"
         bgImage={toggleNode === 1 ? SVBG : SVBGD}
@@ -51,33 +45,11 @@ const SetsView: React.FC<ModeProps> = ({
           <img src={SCARVIOLOGO} alt="" />
         </div>
         <div className="Sets">
-          <SetScarViol toggleNode={toggleNode} handleToggle={handleToggle} />
+          <CardScarViol toggleNode={toggleNode} handleToggle={handleToggle} />
         </div>
       </Parallax>
-      <div className="bodyCont">
-        <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
-      </div>
-      <Parallax
-        className="sets"
-        bgImage={toggleNode === 1 ? SSBG : SSBGD}
-        bgImageStyle={{ height: "125%", width: "150%" }}
-        strength={500}
-      >
-        <div className={toggleNode == 1 ? "LogoTab2" : "LogoTabDark2"}>
-          <img src={SWORDSHIELDLOGO} alt="" />
-        </div>
-        <div className="Sets">
-          <SetSwordShield
-            toggleNode={toggleNode}
-            handleToggle={handleToggle}
-          />
-        </div>
-      </Parallax>
-      <div className="bodyCont">
-        <MakeGround toggleNode={toggleNode} handleToggle={handleToggle} />
-      </div>
     </div>
   );
 };
 
-export default SetsView;
+export default CardsView;

@@ -8,7 +8,7 @@ interface CardItemProps {
   id: number
 }
 
-const CardItem: React.FC<CardItemProps> = ({ image, name, collected, id }) => {
+const SetItem: React.FC<CardItemProps> = ({ image, name, collected, id }) => {
   const [isLogged, setIsLogged] = useState(
     localStorage.getItem("isLogged") === "true"
   );
@@ -51,4 +51,4 @@ const CardItem: React.FC<CardItemProps> = ({ image, name, collected, id }) => {
   );
 };
 
-export default CardItem;
+export default SetItem;

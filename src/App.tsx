@@ -61,6 +61,9 @@ const App = () => {
       case "login":
         setView("login");
         break;
+      case "cards":
+        setView("cards");
+        break;
       default:
         throw new Error("Unknown view");
     }

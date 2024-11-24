@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import CardItem from "../cardItem";
-import CardItemNew from "../cardItemNew";
+import SetItem from "../setItem";
+import SetItemNew from "../setItemNew";
 import CZImage from "../../assets/Elites/CZETB.jpg";
 
 interface CardProps {
@@ -11,7 +11,7 @@ interface CardProps {
 const CardSwordShield: React.FC<CardProps> = ({ toggleNode }) => {
   return (
     <div className="card">
-      <CardItem
+      <SetItem
         image={CZImage}
         name="Crown Zenith"
         collected="0/230 (Progress Bar)"

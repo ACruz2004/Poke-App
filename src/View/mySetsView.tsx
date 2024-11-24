@@ -7,7 +7,7 @@ import { Parallax } from "react-parallax";
 import SVBG from "../assets/Background Images/S&VBG2.jpg";
 import SVBGD from "../assets/Background Images/S&VBG2D.jpg";
 import SCARVIOLOGO from "../assets/Logos/S&VLogo.png";
-import CardScarViolMySets from "../Components/Set Cards/cardScarViolMySets";
+import CardScarViolMySets from "../Components/Sets & Cards/cardScarViolMySets";
 
 interface ModeProps {
   toggleNode: number;
@@ -45,7 +45,7 @@ const MySetsView: React.FC<ModeProps> = ({
           <img src={SCARVIOLOGO} alt="" />
         </div>
         <div className="Sets">
-          <CardScarViolMySets toggleNode={toggleNode} handleToggle={handleToggle} />
+          <CardScarViolMySets toggleNode={toggleNode} handleToggle={handleToggle} handleView={handleView} />
         </div>
       </Parallax>
       <div className="bodyCont">

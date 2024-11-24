@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import CardItem from "../cardItem";
-import CardItemNew from "../cardItemNew";
+import SetItem from "../setItem";
+import SetItemNew from "../setItemNew";
 import SCImage from "../../assets/Elites/SCETB.jpg";
 import TMImage from "../../assets/Elites/TMETB.jpg";
 import SFImage from "../../assets/Elites/SFETB.jpg";
@@ -21,7 +21,7 @@ interface CardProps {
   handleToggle: () => void;
 }
 
-const CardScarViol: React.FC<CardProps> = ({ toggleNode }) => {
+const SetScarViol: React.FC<CardProps> = ({ toggleNode }) => {
 
   const [sets, setSets] = useState([]);
 
@@ -38,7 +38,7 @@ const CardScarViol: React.FC<CardProps> = ({ toggleNode }) => {
         {sets
             .filter((set) => set.setGroup === "Scarlet & Violet")
             .map((set) => (
-            <CardItem
+            <SetItem
                 key={set.setId}
                 image={`/src/assets/Elites/${set.setPath}`}
                 name={set.setName}
@@ -103,4 +103,4 @@ const CardScarViol: React.FC<CardProps> = ({ toggleNode }) => {
   );
 };
 
-export default CardScarViol;
+export default SetScarViol;

@@ -6,7 +6,7 @@ interface CardItemProps {
   collected: string;
 }
 
-const CardItemNew: React.FC<CardItemProps> = ({ image, name, collected }) => {
+const SetItemNew: React.FC<CardItemProps> = ({ image, name, collected }) => {
   return (
     <div className="NewBox">
       <p>New!</p>
@@ -24,4 +24,4 @@ const CardItemNew: React.FC<CardItemProps> = ({ image, name, collected }) => {
   );
 };
 
-export default CardItemNew;
+export default SetItemNew;

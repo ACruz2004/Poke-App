@@ -4,13 +4,14 @@ import SetsView from "../View/setsView";
 import MySetsView from "../View/mySetsView";
 import AboutView from "../View/aboutView";
 import LoginView from "../View/loginView";
+import CardsView from "../View/cardsView";
 
 interface MakeHeadProps {
-  toggleNode: number;
-  handleToggle: () => void;
+    toggleNode: number;
+    handleToggle: () => void;
 }
 
-export type View = 'home' | 'sets' | 'my sets' | 'about' | 'login';
+export type View = 'home' | 'sets' | 'my sets' | 'about' | 'login' | 'cards';
 
 interface ViewProps {
     view: View;
@@ -41,6 +42,10 @@ function currentView(toggleNode: number, handleToggle: () => void, view: View, h
         case 'login':
             return (
                 <LoginView toggleNode={toggleNode} handleToggle={handleToggle} handleView={handleView}></LoginView>
+            );
+        case 'cards':
+            return (
+                <CardsView toggleNode={toggleNode} handleToggle={handleToggle} handleView={handleView}></CardsView>
             );
     }
 };
