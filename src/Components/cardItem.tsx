@@ -12,7 +12,6 @@ const CardItem: React.FC = () => {
     setIsModalOpen(false);
   };
 
-
   return (
     <div className="cardItemBox">
       <div className="cardImage">
@@ -32,7 +31,7 @@ const CardItem: React.FC = () => {
       )} */}
 
       {isModalOpen && (
-        <div className="modal">
+        <div className='modal'>
           <button className="closeButton" onClick={closeModal}>x</button>
           <div className="modalContent">
             <img src={card1} alt="placeholder" />
