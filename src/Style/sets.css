@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Sets {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* Comment */
+
+.cardBox {
+    width: 320px;
+    overflow: hidden;
+    max-height: 470px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cardBox:hover {
+    transition: transform 0.2s ease-in-out;
+    transform: translateY(-5px);
+}
+
+/* New .imageWrapper to contain the scaling effect */
+.cardBox .imageWrapper {
+    width: 100%;
+    height: 235px;
+    overflow: hidden;
+}
+
+.cardBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cardBox:hover img {
+    transform: scale(1.1);
+    /* Zoom effect on hover */
+}
+
+.setName {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 10px;
+}
+
+.setName h2 {
+    font-size: 25px;
+    color: rgb(169, 2, 2);
+}
+
+.collectionStats {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 8px 0px;
+    font-size: 20px;
+    color: #222;
+    font-weight: bold;
+}
+
+.addTo {
+    margin-top: 20px;
+    outline: none;
+    border: 1px solid rgb(169, 2, 2);
+    padding: 12px 32px;
+    border-radius: 40px;
+    background: none;
+    color: rgb(169, 2, 2);
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .15s linear;
+}
+
+.addTo:hover {
+    background: rgb(169, 2, 2);
+    color: #fff;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.NewBox p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(169, 2, 2);
+    border: 1px solid rgb(250, 250, 250);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #f4f4f4;
+    margin-top: -18px;
+    padding-left: 30px;
+    width: 100px;
+}
+
+.LogoTab {
+    background-color: #f4f4f4;
+    box-shadow: 1px 5px 5px #000000;
+    height: 75px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 300px;
+    transition: 0.5s ease-in-out;
+}
+
+.LogoTab img {
+    margin-left: 50px;
+    margin-top: -21px;
+    width: 200px;
+    height: auto;
+}
+
+.LogoTabDark {
+    background-color: #222;
+    color: #f6f8f9;
+    box-shadow: 1px 5px 5px #f6f8f9;
+    height: 75px;
+    z-index: 3;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 300px;
+    transition: 0.5s ease-in-out;
+}
+
+.LogoTabDark img {
+    margin-left: 50px;
+    margin-top: -21px;
+    width: 200px;
+    height: auto;
+}
+
+.LogoTab2 {
+    background-color: #f4f4f4;
+    box-shadow: 1px 5px 5px #000000;
+    height: 75px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 300px;
+    transition: 0.5s ease-in-out;
+}
+
+.LogoTab2 img {
+    margin-left: 50px;
+    margin-top: 21px;
+    width: 200px;
+    height: auto;
+}
+
+.LogoTabDark2 {
+    background-color: #222;
+    color: #f6f8f9;
+    box-shadow: 1px 5px 5px #f6f8f9;
+    height: 75px;
+    z-index: 3;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 300px;
+    transition: 0.5s ease-in-out;
+}
+
+.LogoTabDark2 img {
+    margin-left: 50px;
+    margin-top: 21px;
+    width: 200px;
+    height: auto;
+}

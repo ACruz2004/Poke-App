@@ -5,6 +5,8 @@ import "./Style/index.css";
 import "./Style/navBar.css";
 import "./Style/bod.css";
 import "./Style/input.css";
+import "./Style/cards.css";
+import "./Style/sets.css"
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
