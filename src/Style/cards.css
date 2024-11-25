@@ -1,6 +1,6 @@
 .cardItemBox {
-    width: 320px;
-    max-height: 470px;
+    width: 20vw;
+    max-height: 550px;
     padding: 10px;
     border-radius: 10px;
     background-color: transparent;
@@ -9,23 +9,26 @@
 
 .cardItemBox .cardImage {
     width: 100%;
-    height: 100%;
+    height: auto;
     overflow: hidden;
     position: relative;
 }
+
 
 .cardItemBox .cardImage img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Ensures the image covers the container without stretching */
     transition: transform 0.3s ease-in-out;
-    /* Smooth zoom effect */
+}
+
+.cardItemBox .cardImage .imageBlur {
+    filter: grayscale(80%);
+    opacity: 0.4;
 }
 
 .cardItemBox .cardImage:hover img {
     transform: scale(0.9);
-    /* Zoom in the image on hover */
 }
 
 .cardName {
@@ -80,6 +83,11 @@
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     margin-right: 10vw;
+}
+
+.modalContent .modalImageBlur {
+    filter: grayscale(80%);
+    opacity: 0.4;
 }
 
 .closeButton {

@@ -23,7 +23,7 @@ const CardItem: React.FC = () => {
   return (
     <div className="cardItemBox">
       <div className="cardImage">
-        <img src={card1} alt="placeholder" onClick={handleImageClick} />
+        <img src={card1} alt="placeholder" onClick={handleImageClick} className={isOwned? "" : "imageBlur"}/>
       </div>
       <div className="cardName">
         <h2>test card</h2>
@@ -33,7 +33,7 @@ const CardItem: React.FC = () => {
         <div className='modal'>
           <button className="closeButton" onClick={closeModal}>x</button>
           <div className="modalContent">
-            <img src={card1} alt="placeholder" />
+            <img src={card1} alt="placeholder" className={isOwned? "" : "modalImageBlur"}/>
           </div>
           <div className="ownedContent">
             <label className="ownedText">
