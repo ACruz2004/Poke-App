@@ -5,7 +5,7 @@ import { View } from "./currentView";
 interface CardItemProps {
   image: string;
   name: string;
-  collected: string;
+  collected: number;
   id: number
   handleView: (action: View) => void;
 }

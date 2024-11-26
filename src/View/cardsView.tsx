@@ -20,6 +20,8 @@ const CardsView: React.FC<ModeProps> = ({
   handleView,
 }) => {
 
+  const backgroundImage = toggleNode === 1 ? SVBG : SVBGD;
+
   return (
     <div>
       <div className={"container"}>
@@ -29,22 +31,18 @@ const CardsView: React.FC<ModeProps> = ({
           handleView={handleView}
         />
       </div>
-      <Parallax
-        className="cardParallax"
-        bgImage={toggleNode === 1 ? SVBG : SVBGD}
-        bgImageStyle={{
-          height: "100%",
-          width: "125%",
-        }}
-        strength={500}
-      >
+      <div className="cardParallax">
+        <div 
+          className="background"
+          style={{ backgroundImage: `url(${backgroundImage})` }}>
+        </div>
         <div className={toggleNode == 1 ? "LogoTab" : "LogoTabDark"}>
           <img src={SCARVIOLOGO} alt="" />
         </div>
         <div className="sets">
           <CardScarViol toggleNode={toggleNode} handleToggle={handleToggle} />
         </div>
-      </Parallax>
+      </div>
     </div>
   );
 };

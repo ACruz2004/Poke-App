@@ -4,7 +4,7 @@ import axios from "axios";
 interface CardItemProps {
   image: string;
   name: string;
-  collected: string;
+  collected: number;
   id: number
 }
 

@@ -8,9 +8,17 @@ interface CardProps {
     handleView: (action: View) => void;
 }
 
+interface Set {
+    setId: number;
+    setName: string;
+    setGroup: string;
+    setPath: string;
+    progress: number;
+  }
+
 const CardScarViolMySets: React.FC<CardProps> = ({handleView}) => {
 
-    const [sets, setSets] = useState([]);
+    const [sets, setSets] = useState<Set[]>([]);
 
     const username = localStorage.getItem("username")
 

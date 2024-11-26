@@ -33,7 +33,7 @@ const CardScarViol: React.FC<CardProps> = () => {
       {cards
         .sort((a, b) => a.cardId - b.cardId)
         .map((card) => (
-            <CardItem name={card.cardName} />
+            <CardItem cardName={card.cardName} />
           )
         )
       }

@@ -6,9 +6,17 @@ interface CardProps {
   handleToggle: () => void;
 }
 
+interface Set {
+  setId: number;
+  setName: string;
+  setGroup: string;
+  setPath: string;
+  progress: number;
+}
+
 const SetScarViol: React.FC<CardProps> = ({ toggleNode }) => {
 
-  const [sets, setSets] = useState([]);
+  const [sets, setSets] = useState<Set[]>([]);
 
   useEffect(() => {
     fetch("http://localhost:8080/get_all_sets")
