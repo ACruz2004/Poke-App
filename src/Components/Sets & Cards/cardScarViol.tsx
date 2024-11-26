@@ -33,7 +33,7 @@ const CardScarViol: React.FC<CardProps> = () => {
       {cards
         .sort((a, b) => a.cardId - b.cardId)
         .map((card) => (
-            <CardItem cardName={card.cardName} />
+            <CardItem cardName={card.cardName} cardImage={`/src/assets/Cards/Surging Sparks/${card.cardPath}.jpg`} />
           )
         )
       }

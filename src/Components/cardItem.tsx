@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import card1 from "../assets/Stellar/stellarCrownCard1.png";
 
 interface CardProps {
-  cardName: string
+  cardName: string,
+  cardImage: string
 }
 
-const CardItem: React.FC<CardProps> = ({cardName}) => {
+const CardItem: React.FC<CardProps> = ({cardName, cardImage}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isOwned, setIsOwned] = useState(false);
 
@@ -27,7 +28,7 @@ const CardItem: React.FC<CardProps> = ({cardName}) => {
   return (
     <div className="cardItemBox">
       <div className="cardImage">
-        <img src={card1} alt="placeholder" onClick={handleImageClick} className={isOwned? "" : "imageBlur"}/>
+        <img src={cardImage} alt="placeholder" onClick={handleImageClick} className={isOwned? "" : "imageBlur"}/>
       </div>
       <div className="cardName">
         <h2>{cardName}</h2>
@@ -37,7 +38,7 @@ const CardItem: React.FC<CardProps> = ({cardName}) => {
         <div className='modal'>
           <button className="closeButton" onClick={closeModal}>x</button>
           <div className="modalContent">
-            <img src={card1} alt="placeholder" className={isOwned? "" : "modalImageBlur"}/>
+            <img src={cardImage} alt="placeholder" className={isOwned? "" : "modalImageBlur"}/>
           </div>
           <div className="ownedContent">
             <label className="ownedText">
