@@ -27,14 +27,6 @@ db.connect((err) => {
     console.log('Connected to MySQL database');
 });
 
-// app.get('/get-data', (re, res) => {
-//     const query = 'SELECT * FROM users';
-//     db.query(query, (err, result) => {
-//         if (err) res.send(err);
-//         else res.send(result);
-//     });
-// });
-
 app.post('/signup', (req, res) => {
     data = req.body;
     username = data['username'];
@@ -137,8 +129,10 @@ app.get('/get_all_mySets', (req, res) => {
 
 app.get('/get_cards', (req, res) => {
     const query = `
-        SELECT cardId, cardName, cardPath FROM cards
-        WHERE setId = ?;
+        SELECT A.*, B.setName
+        FROM cards AS A
+        JOIN sets AS B ON A.setId = B.setId
+        WHERE A.setId = 1;
     `;
 
     const setId = req.query.setId;

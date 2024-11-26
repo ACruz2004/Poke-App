@@ -38,7 +38,7 @@
 }
 
 .cardItemBox .cardImage:hover img {
-    transform: scale(0.9);
+    transform: scale(0.85);
 }
 
 .cardName {
@@ -98,8 +98,8 @@
 }
 
 .modalContent .modalImageBlur {
-    filter: grayscale(80%);
-    opacity: 0.4;
+    filter: grayscale(90%);
+    opacity: 0.7;
 }
 
 .closeButton {

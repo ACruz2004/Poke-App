@@ -1,15 +1,15 @@
 import React from "react";
 import { Parallax } from "react-parallax";
 import MakeHead from "../Components/navBar";
-import MakeHeadVidSets from "../Components/bgvidSets";
+import MakeHeadVidSets from "../Background Vids/bgvidSets";
 import MakeGround from "../Components/ground";
 import MakeBody from "../Components/body";
 import SCARVIOLOGO from "../assets/Logos/S&VLogo.png";
 import SWORDSHIELDLOGO from "../assets/Logos/S&SLogo.png";
 import "../Style/cards.css";
 import { View } from "../Components/currentView";
-import SetScarViol from "../Components/Sets & Cards/setScarViol";
-import SetSwordShield from "../Components/Sets & Cards/setSwordShield";
+import SetScarViol from "../Sets & Cards/setScarViol";
+import SetSwordShield from "../Sets & Cards/setSwordShield";
 import SVBG from "../assets/Background Images/S&VBG2.jpg";
 import SVBGD from "../assets/Background Images/S&VBG2D.jpg";
 import SSBG from "../assets/Background Images/S&SBG.jpeg";

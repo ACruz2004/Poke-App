@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { View } from "./currentView";
+import { View } from "../Components/currentView";
 
 interface CardItemProps {
   image: string;

@@ -1,6 +1,6 @@
 import React from "react";
 import MakeHead from "../Components/navBar";
-import MakeHeadVidMySets from "../Components/bgvidMySets";
+import MakeHeadVidMySets from "../Background Vids/bgvidMySets";
 import MakeBody from "../Components/body";
 import { View } from "../Components/currentView";
 import { Parallax } from "react-parallax";

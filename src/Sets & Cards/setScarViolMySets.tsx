@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import SetItemMySet from "../setItemMySet";
-import { View } from "../currentView";
+import SetItemMySet from ".././Set & Card Items/setItemMySet";
+import { View } from "../Components/currentView";
 
 interface CardProps {
     toggleNode: number;

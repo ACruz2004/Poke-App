@@ -4,7 +4,7 @@ import MakeHead from "../Components/navBar";
 import SCARVIOLOGO from "../assets/Logos/S&VLogo.png";
 import "../Style/cards.css";
 import { View } from "../Components/currentView";
-import CardScarViol from "../Components/Sets & Cards/cardScarViol";
+import CardScarViol from "../Sets & Cards/cardScarViol";
 import SVBG from "../assets/Background Images/S&VBG2.jpg";
 import SVBGD from "../assets/Background Images/S&VBG2D.jpg";
 

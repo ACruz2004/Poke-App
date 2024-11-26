@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from "react";
-import CardItem from "../cardItem";
+import CardItem from ".././Set & Card Items/cardItem";
 
 interface CardProps {
   toggleNode: number;
   handleToggle: () => void;
 }
 
+interface Card {
+  cardId: number,
+  cardName: string,
+  cardPath: string,
+  setName: string
+}
+
 const CardScarViol: React.FC<CardProps> = () => {
 
-  const [cards, setCards] = useState([]);
+  const [cards, setCards] = useState<Card[]>([]);
 
   const setId = localStorage.getItem("set")
 
@@ -33,7 +40,7 @@ const CardScarViol: React.FC<CardProps> = () => {
       {cards
         .sort((a, b) => a.cardId - b.cardId)
         .map((card) => (
-            <CardItem cardName={card.cardName} cardImage={`/src/assets/Cards/Surging Sparks/${card.cardPath}.jpg`} />
+            <CardItem cardName={card.cardName} cardImage={`/src/assets/Cards/${card.setName}/${card.cardPath}.jpg`} />
           )
         )
       }

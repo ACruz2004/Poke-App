@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import SetItem from "../setItem";
+import SetItem from ".././Set & Card Items/setItem";
 
 interface CardProps {
   toggleNode: number;

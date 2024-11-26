@@ -1,5 +1,5 @@
 import MakeHead from "../Components/navBar";
-import MakeHeadVid from "../Components/bgvid";
+import MakeHeadVid from "../Background Vids/bgvid";
 import MakeBody from "../Components/body";
 import MakeGround from "../Components/ground";
 import ImageShroud from "../Components/ImageShrouded";

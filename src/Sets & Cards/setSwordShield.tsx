@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import SetItem from "../setItem";
-import SetItemNew from "../setItemNew";
+import SetItem from ".././Set & Card Items/setItem";
 import CZImage from "../../assets/Elites/CZETB.jpg";
 
 interface CardProps {

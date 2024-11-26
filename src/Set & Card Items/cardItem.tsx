@@ -38,7 +38,7 @@ const CardItem: React.FC<CardProps> = ({cardName, cardImage}) => {
         <div className='modal'>
           <button className="closeButton" onClick={closeModal}>x</button>
           <div className="modalContent">
-            <img src={cardImage} alt="placeholder" className={isOwned? "" : "modalImageBlur"}/>
+            <img src={cardImage} alt={cardName} className={isOwned? "" : "modalImageBlur"}/>
           </div>
           <div className="ownedContent">
             <label className="ownedText">
