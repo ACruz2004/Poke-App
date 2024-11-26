@@ -31,7 +31,7 @@ const CardScarViolMySets: React.FC<CardProps> = ({handleView}) => {
     }, [username]);
 
     return (
-        <div className="card">
+        <div className="set">
             {sets
                 .filter((set) => set.setGroup === "Scarlet & Violet")
                 .sort((a, b) => a.setId - b.setId)

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import CardItem from "../cardItem";
-import card1 from "../assets/Stellar/stellarCrownCard1.png";
 
 interface CardProps {
   toggleNode: number;
@@ -9,9 +8,35 @@ interface CardProps {
 
 const CardScarViol: React.FC<CardProps> = () => {
 
+  const [cards, setCards] = useState([]);
+
+  const setId = localStorage.getItem("set")
+
+  useEffect(() => {
+    if (setId) {
+      fetch(`http://localhost:8080/get_cards?setId=${encodeURIComponent(setId)}`)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((data) => setCards(data))
+        .catch((error) => console.error("Error fetching cards:", error));
+    } else {
+      console.log("Can't find the originating set");
+    }
+  }, []);
+
   return (
     <div className="card">
-      <CardItem/>
+      {cards
+        .sort((a, b) => a.cardId - b.cardId)
+        .map((card) => (
+            <CardItem name={card.cardName} />
+          )
+        )
+      }
     </div>
   );
 };

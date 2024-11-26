@@ -1,19 +1,12 @@
-import React from "react";
-import { Parallax } from "react-parallax";
+import React, { useEffect, useState } from "react";
+import { Background, Parallax } from "react-parallax";
 import MakeHead from "../Components/navBar";
-import MakeHeadVidCards from "../Components/bgvidCards";
-import MakeGround from "../Components/ground";
-import MakeBody from "../Components/body";
 import SCARVIOLOGO from "../assets/Logos/S&VLogo.png";
-import SWORDSHIELDLOGO from "../assets/Logos/S&SLogo.png";
 import "../Style/cards.css";
 import { View } from "../Components/currentView";
 import CardScarViol from "../Components/Sets & Cards/cardScarViol";
-import CardSwordShield from "../Components/Sets & Cards/setSwordShield";
 import SVBG from "../assets/Background Images/S&VBG2.jpg";
 import SVBGD from "../assets/Background Images/S&VBG2D.jpg";
-import SSBG from "../assets/Background Images/S&SBG.jpeg";
-import SSBGD from "../assets/Background Images/S&SBGD.jpeg";
 
 interface ModeProps {
   toggleNode: number;
@@ -26,6 +19,7 @@ const CardsView: React.FC<ModeProps> = ({
   handleToggle,
   handleView,
 }) => {
+
   return (
     <div>
       <div className={"container"}>
@@ -36,15 +30,18 @@ const CardsView: React.FC<ModeProps> = ({
         />
       </div>
       <Parallax
-        className="sets"
+        className="cardParallax"
         bgImage={toggleNode === 1 ? SVBG : SVBGD}
-        bgImageStyle={{ height: "100%", width: "125%" }}
+        bgImageStyle={{
+          height: "100%",
+          width: "125%",
+        }}
         strength={500}
       >
         <div className={toggleNode == 1 ? "LogoTab" : "LogoTabDark"}>
           <img src={SCARVIOLOGO} alt="" />
         </div>
-        <div className="Sets">
+        <div className="sets">
           <CardScarViol toggleNode={toggleNode} handleToggle={handleToggle} />
         </div>
       </Parallax>

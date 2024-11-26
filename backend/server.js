@@ -135,6 +135,23 @@ app.get('/get_all_mySets', (req, res) => {
     });
 });
 
+app.get('/get_cards', (req, res) => {
+    const query = `
+        SELECT cardId, cardName, cardPath FROM cards
+        WHERE setId = ?;
+    `;
+
+    const setId = req.query.setId;
+
+    db.query(query, setId, (err, result) => {
+        if (err) {
+            res.status(500).send(err);
+            return;
+        }
+        res.send(result)
+    });
+});
+
 app.listen(PORT, () => {
     console.log("listening");
 })

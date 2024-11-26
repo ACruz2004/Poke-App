@@ -36,10 +36,10 @@ const MySetsView: React.FC<ModeProps> = ({
         <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
       </div>
       <Parallax
-        className="sets"
+        className=""
         bgImage={toggleNode === 1 ? SVBG : SVBGD}
         bgImageStyle={{ height: "100%", width: "125%" }}
-        strength={500}
+        strength={500}  
       >
         <div className={toggleNode == 1 ? "LogoTab" : "LogoTabDark"}>
           <img src={SCARVIOLOGO} alt="" />

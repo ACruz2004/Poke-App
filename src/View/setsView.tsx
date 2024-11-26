@@ -42,7 +42,7 @@ const SetsView: React.FC<ModeProps> = ({
         <MakeBody toggleNode={toggleNode} handleToggle={handleToggle} />
       </div>
       <Parallax
-        className="sets"
+        className=""
         bgImage={toggleNode === 1 ? SVBG : SVBGD}
         bgImageStyle={{ height: "100%", width: "125%" }}
         strength={500}

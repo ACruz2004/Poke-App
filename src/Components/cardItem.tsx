@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import card1 from "../assets/Stellar/stellarCrownCard1.png";
 
-const CardItem: React.FC = () => {
+interface CardProps {
+  cardName: string
+}
+
+const CardItem: React.FC<CardProps> = ({cardName}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isOwned, setIsOwned] = useState(false);
 
@@ -26,7 +30,7 @@ const CardItem: React.FC = () => {
         <img src={card1} alt="placeholder" onClick={handleImageClick} className={isOwned? "" : "imageBlur"}/>
       </div>
       <div className="cardName">
-        <h2>test card</h2>
+        <h2>{cardName}</h2>
       </div>
 
       {isModalOpen && (
