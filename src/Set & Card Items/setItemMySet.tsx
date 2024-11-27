@@ -17,7 +17,6 @@ const SetItemMySet: React.FC<CardItemProps> = ({ image, name, collected, id, han
   const [username, setUsername] = useState(localStorage.getItem("username"));
 
   const handleSubmit = async (
-    username: string | null,
     setId: number
   ) => {
     localStorage.setItem("set", setId.toString())
@@ -33,7 +32,7 @@ const SetItemMySet: React.FC<CardItemProps> = ({ image, name, collected, id, han
         <h2>{name}</h2>
       </div>
       <div className="collectionStats">{collected}</div>
-      {isLogged && <button className="addTo" onClick={() => {handleSubmit(username, id)}}>View Cards</button>}
+      {isLogged && <button className="addTo" onClick={() => {handleSubmit(id)}}>View Cards</button>}
     </div>
   );
 };

@@ -146,6 +146,84 @@ app.get('/get_cards', (req, res) => {
     });
 });
 
+app.get('/get_owned_cards', (req, res) => {
+    const { username, setId } = req.query;
+
+    if (!username || !setId) {
+        return res.status(400).send('Username and setId are required');
+    }
+
+    const query1 = "SELECT userId FROM user_info_cool WHERE username = ?";
+
+    db.query(query1, [username], (err1, result1) => {
+        if (err1) {
+            return res.status(500).send(err1);
+        }
+
+        if (result1.length === 0) {
+            return res.status(404).send('User not found');
+        }
+
+        const userId = result1[0].userId;
+
+        const query2 = `
+            SELECT cardId
+            FROM user_cards
+            WHERE userId = ? AND setId = ?
+        `;
+
+        db.query(query2, [userId, setId], (err2, result2) => {
+            if (err2) {
+                return res.status(500).send(err2);
+            }
+            res.send(result2)
+        });
+    });
+});
+
+app.post('/update_ownership', (req, res) => {
+    const { username, cardId, setId, owned } = req.body;
+
+    const getUserIdQuery = 'SELECT userId FROM user_info_cool WHERE username = ?';
+
+    db.query(getUserIdQuery, [username], (err, result) => {
+        if (err) {
+            console.error('Error fetching userId:', err);
+            return res.status(500).send('Error fetching user ID');
+        }
+
+        if (result.length === 0) {
+            return res.status(404).send('User not found');
+        }
+
+        const userId = result[0].userId;  // Get the userId from the query result
+
+        if (owned) {
+            // Insert ownership record if it doesn't exist
+            const insertQuery = 'INSERT INTO user_cards (userId, cardId, setId) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE userId=userId';
+            db.query(insertQuery, [userId, cardId, setId], (err, result) => {
+                if (err) {
+                    console.error('Error inserting ownership:', err);
+                    return res.status(500).send('Error updating ownership');
+                }
+                return res.status(200).send('Ownership updated successfully');
+            });
+        } else {
+            // Remove the ownership record
+            const deleteQuery = 'DELETE FROM user_cards WHERE userId = ? AND cardId = ? AND setId = ?';
+            db.query(deleteQuery, [userId, cardId, setId], (err, result) => {
+                if (err) {
+                    console.error('Error removing ownership:', err);
+                    return res.status(500).send('Error updating ownership');
+                }
+                return res.status(200).send('Ownership removed successfully');
+            });
+        }
+    });
+});
+
+
+
 app.listen(PORT, () => {
     console.log("listening");
 })

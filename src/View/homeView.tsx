@@ -2,12 +2,12 @@ import MakeHead from "../Components/navBar";
 import MakeHeadVid from "../Background Vids/bgvid";
 import MakeBody from "../Components/body";
 import MakeGround from "../Components/ground";
-import ImageShroud from "../Components/ImageShrouded";
-import ImageStellar from "../Components/ImageStellar";
-import ImageTwilight from "../Components/ImageTwilight";
+import ImageShroud from "../Parallax Images/ImageShrouded";
+import ImageStellar from "../Parallax Images/ImageStellar";
+import ImageTwilight from "../Parallax Images/ImageTwilight";
 import React from "react";
 import { View } from "../Components/currentView";
-import ImageSparking from "../Components/ImageSparking";
+import ImageSparking from "../Parallax Images/ImageSparking";
 
 interface ModeProps {
   toggleNode: number;

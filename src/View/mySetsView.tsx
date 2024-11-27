@@ -7,7 +7,7 @@ import { Parallax } from "react-parallax";
 import SVBG from "../assets/Background Images/S&VBG2.jpg";
 import SVBGD from "../assets/Background Images/S&VBG2D.jpg";
 import SCARVIOLOGO from "../assets/Logos/S&VLogo.png";
-import CardScarViolMySets from "../Components/Sets & Cards/setScarViolMySets";
+import CardScarViolMySets from "../Sets & Cards/setScarViolMySets";
 
 interface ModeProps {
   toggleNode: number;
