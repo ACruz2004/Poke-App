@@ -24,6 +24,7 @@ Day 17: Added Parallax to Sets, Going to Toss Different Things Around (ALSO ADDE
 <img width="1470" alt="Screenshot 2024-11-13 at 7 27 32 PM" src="https://github.com/user-attachments/assets/fbce9327-a969-4f2c-8f0d-0a45ad922a11">
 <img width="1470" alt="Screenshot 2024-11-13 at 7 27 36 PM" src="https://github.com/user-attachments/assets/4d867a32-23a8-4af1-b5db-a7e181d59a44">
 
+Dev Paused Due to Finals...
 
 # React + TypeScript + Vite
 
